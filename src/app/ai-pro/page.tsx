@@ -1,5 +1,7 @@
-const AiPro = () => {
-  return <div>AiPro</div>;
+import AiPro from "@/components/pages/AiPro";
+
+const AiProPage = () => {
+  return <AiPro />;
 };
 
-export default AiPro;
+export default AiProPage;

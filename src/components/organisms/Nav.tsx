@@ -1,5 +1,5 @@
 const Nav = () => {
-  return <nav>Nav</nav>;
+  return <nav>placetel.ai</nav>;
 };
 
 export default Nav;

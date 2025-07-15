@@ -23,7 +23,7 @@ const Nav = () => {
           </li>
 
           <li>
-            <Button variant="secondary">
+            <Button variant={"secondary"}>
               <Link href="/">Start free trial</Link>
             </Button>
           </li>

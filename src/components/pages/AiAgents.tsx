@@ -8,33 +8,37 @@ const AiAgents = () => {
   return (
     <div className="min-h-screen text-gray-900 font-sans">
       {/* Hero Section */}
-      <section className="px-6 pt-24 pb-32 text-center max-w-3xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold mb-6"
-        >
-          Intelligente Telefonie,
-          <br />
-          die für Sie mitdenkt.
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="text-lg md:text-xl mb-8"
-        >
-          Der <strong>Placetel AI SmartDesk</strong> übernimmt Anrufe, entlastet
-          Ihr Team und sorgt für Erreichbarkeit rund um die Uhr.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        >
-          <Button size="lg">Jetzt kostenlos testen</Button>
-        </motion.div>
+      <section className="px-6 py-32 text-center justify-center w-full items-center gap-8 flex flex-col">
+        <div className="flex flex-col gap-8 max-w-4xl text-balance">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-7xl font-bold"
+          >
+            Intelligente Telefonie,
+            <br />
+            <span className="font-normal">die für Sie mitdenkt.</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-lg md:text-2xl"
+          >
+            Der <strong>Placetel AI SmartDesk</strong> übernimmt Anrufe,
+            entlastet Ihr Team und sorgt für Erreichbarkeit rund um die Uhr.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            <Button size="lg">Jetzt kostenlos testen</Button>
+          </motion.div>
+        </div>
       </section>
 
       {/* Problem / Lösung Section */}
@@ -107,7 +111,7 @@ const AiAgents = () => {
       {/* USP Section */}
       <section className="bg-gray-100 py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-10">
+          <h2 className="text-3xl font-semibold hover:font-extrabold transition-all mb-10">
             Ihre Vorteile mit dem SmartDesk
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

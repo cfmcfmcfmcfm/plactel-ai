@@ -1,12 +1,13 @@
+// layout.tsx
+
+import Footer from "@/components/organisms/Footer";
+import Nav from "@/components/organisms/Nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import BgGrid from "@/components/atoms/BgGrid";
-import Footer from "@/components/organisms/Footer";
-import Nav from "@/components/organisms/Nav";
 
 const whyte = localFont({
-  src: "../../public/fonts/ABCWhyteVariable-Trial.woff2",
+  src: "../fonts/ABCWhyteVariable-Trial.woff2",
   variable: "--font-whyte",
 });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <BgGrid />
+        {/* <BgGrid /> */}
       </body>
     </html>
   );

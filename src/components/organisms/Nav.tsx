@@ -4,29 +4,30 @@ import Image from "next/image";
 
 const Nav = () => {
   return (
-    <nav className="fixed inset-x-0 top-0 p-2 z-50">
+    <nav className="sticky inset-x-0 top-0 p-2 z-50">
       <div className="w-full rounded-xl overflow-hidden bg-black/90 px-4 py-3 text-neutral-200 flex justify-between items-center">
-        <ul className="flex gap-4 items-center">
-          <Link href="/">
-            <Image
-              src="/assets/plt-gamma-logo-weiß.png"
-              width={1700}
-              height={390}
-              className="w-48"
-              alt=""
-            />
-          </Link>
-        </ul>
+        <Link href="/" className="w-40 shrink-0">
+          <Image
+            src="/assets/plt-gamma-logo-weiß.png"
+            width={1700}
+            height={390}
+            alt="Placetel Logo"
+          />
+        </Link>
 
         <ul className="flex gap-12 items-center">
-          <div className="flex gap-4 items-center">
-            <Link href="/ai-agents" className="hover:text-white transition">
-              <li>Ai Agents</li>
-            </Link>
+          <div className="flex items-center">
+            <Button variant="ghost">
+              <Link href="/ai-agents">
+                <li>Ai Agents</li>
+              </Link>
+            </Button>
 
-            <Link href="/ai-pro" className="hover:text-white transition">
-              <li>Ai Pro</li>
-            </Link>
+            <Button variant="ghost">
+              <Link href="/ai-pro">
+                <li>Ai Pro</li>
+              </Link>
+            </Button>
           </div>
 
           <div className="h-8 w-px bg-neutral-600" />

@@ -1,12 +1,12 @@
 import CTASection from "@/components/molecules/CTASection";
-import SharedLayoutAnimation from "../molecules/TabTest";
-import RoiCalculator from "../molecules/RoiCalculator";
+import RoiCalculator from "@/components/molecules/RoiCalculator";
+// import SharedLayoutAnimation from "../molecules/TabTest";
 
 const AiPro = () => {
   return (
     <div>
       <RoiCalculator />
-      <SharedLayoutAnimation />
+      {/* <SharedLayoutAnimation /> */}
       <CTASection />
     </div>
   );

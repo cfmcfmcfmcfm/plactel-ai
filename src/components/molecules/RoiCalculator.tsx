@@ -96,6 +96,7 @@ const RoiCalculator = () => {
   return (
     <section className="p-2">
       <motion.section
+        // className="bg-neutral-50 border rounded-2xl p-6 md:p-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12"
         className="bg-neutral-50 border rounded-2xl p-6 md:p-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

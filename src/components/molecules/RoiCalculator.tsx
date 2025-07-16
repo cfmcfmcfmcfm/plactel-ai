@@ -9,7 +9,22 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toPng } from "html-to-image";
 
-export default function RoiCalculator() {
+const Summary = ({
+  label,
+  value,
+}: {
+  label: string;
+  value: string | number;
+}) => {
+  return (
+    <div className="flex justify-between border-b pb-2">
+      <span className="text-muted-foreground">{label}</span>
+      <span className="font-medium">{value}</span>
+    </div>
+  );
+};
+
+const RoiCalculator = () => {
   const [inputs, setInputs] = useState({
     faqs: true,
     weiterleitungen: true,
@@ -202,13 +217,6 @@ export default function RoiCalculator() {
       </motion.section>
     </section>
   );
-}
+};
 
-function Summary({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div className="flex justify-between border-b pb-2">
-      <span className="text-muted-foreground">{label}</span>
-      <span className="font-medium">{value}</span>
-    </div>
-  );
-}
+export default RoiCalculator;

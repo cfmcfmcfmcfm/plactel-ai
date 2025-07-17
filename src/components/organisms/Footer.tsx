@@ -1,15 +1,35 @@
-// import { Marquee } from "@devnomic/marquee";
-// import "@devnomic/marquee/dist/index.css";
-
 const Footer = () => {
   return (
     <footer className="w-full p-2 flex flex-col items-center">
-      <div className="w-full bg-black/90 text-white rounded-2xl p-4 min-h-80">
-        {/* <Marquee fade={true} className="text-4xl font-bold">
-          I can be a React component, multiple React components, or just some
-          text.
-        </Marquee> */}
-        Footer
+      <div className="w-full bg-gray-800 text-white rounded-2xl p-4 min-h-80 grid grid-cols-4">
+        <div className="flex gap-2 flex-col">
+          <p className="text-xs uppercase">Ai Agents</p>
+          <ul>
+            <li>Ai Smart Desk</li>
+            <li>Ai Pro</li>
+          </ul>
+        </div>
+        <div className="flex gap-2 flex-col">
+          <p className="text-xs uppercase">Ai Agents</p>
+          <ul>
+            <li>Ai Smart Desk</li>
+            <li>Ai Pro</li>
+          </ul>
+        </div>
+        <div className="flex gap-2 flex-col">
+          <p className="text-xs uppercase">Ai Agents</p>
+          <ul>
+            <li>Ai Smart Desk</li>
+            <li>Ai Pro</li>
+          </ul>
+        </div>
+        <div className="flex gap-2 flex-col">
+          <p className="text-xs uppercase">Ai Agents</p>
+          <ul>
+            <li>Ai Smart Desk</li>
+            <li>Ai Pro</li>
+          </ul>
+        </div>
       </div>
     </footer>
   );

@@ -94,10 +94,10 @@ const RoiCalculator = () => {
   };
 
   return (
-    <section className="p-2">
+    <section className="px-2 text-black">
       <motion.section
-        // className="bg-neutral-50 border rounded-2xl p-6 md:p-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12"
-        className="bg-neutral-50 border rounded-2xl p-6 md:p-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12"
+        // className="bg-gray-50 border rounded-2xl p-6 md:p-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12"
+        className="bg-gray-50 border rounded-xl p-6 md:p-10 grid md:grid-cols-2 gap-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -173,7 +173,7 @@ const RoiCalculator = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-neutral-100 rounded-xl p-6 space-y-4"
+          className="bg-gray-100 rounded-xl p-6 space-y-4"
         >
           <h2 className="text-xl">Ihr monatlicher AI-Mehrwert</h2>
 

@@ -71,7 +71,7 @@ const AiProPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl  text-white mb-8 leading-none">
+              <h1 className="font-light text-5xl md:text-7xl lg:text-8xl  text-white mb-8 leading-none">
                 Flexibler AI-Agent für
                 <br />
                 <span className="text-slate-300">komplexe Anforderungen</span>

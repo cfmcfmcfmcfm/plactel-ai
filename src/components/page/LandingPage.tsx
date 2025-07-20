@@ -44,7 +44,7 @@ export default function LandingPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8 }}
               className="flex flex-wrap text-center justify-center mb-8 border-y border-slate-700 text-slate-400 text-sm uppercase tracking-wider"
             >
               <span className="min-w-72 border-r py-1 border-slate-700">

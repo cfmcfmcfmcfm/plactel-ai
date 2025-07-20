@@ -36,7 +36,7 @@ export default function IterativSection() {
 function ContentItem({ title }: { title: string }) {
   return (
     <div className="h-screen w-full bg-gray-100 rounded-xl p-6 shadow">
-      <h2 className="text-2xl font-bold">{title}</h2>
+      <h2 className="text-2xl ">{title}</h2>
       <p className="mt-4 text-muted-foreground">Scrollbare Inhalte …</p>
     </div>
   );

@@ -75,7 +75,7 @@ const AiSmartDeskPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-none">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl  text-white mb-8 leading-none">
                 Intelligente Telefonie
                 <br />
                 <span className="  text-slate-300">auf Knopfdruck</span>
@@ -99,18 +99,11 @@ const AiSmartDeskPage = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
+              <Button size="lg">
                 Kostenlos testen
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 text-lg px-8 py-4 h-14 bg-transparent"
-              >
+              <Button size="lg" variant="outline">
                 Demo Call buchen
               </Button>
             </motion.div>
@@ -128,7 +121,7 @@ const AiSmartDeskPage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               So hilft der Placetel AI SmartDesk
               <br />
               <span className="  text-slate-300">in der Praxis</span>
@@ -158,7 +151,7 @@ const AiSmartDeskPage = () => {
                             <useCase.icon className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-white">
+                            <h3 className="text-2xl  text-white">
                               {useCase.title}
                             </h3>
                             <p className="text-slate-400 text-sm">
@@ -186,9 +179,7 @@ const AiSmartDeskPage = () => {
                               >
                                 <Play className="w-8 h-8 text-white" />
                               </div>
-                              <p className="text-slate-300 font-medium">
-                                Demo Video
-                              </p>
+                              <p className="text-slate-300 ">Demo Video</p>
                               <p className="text-sm text-slate-400">
                                 Sehen Sie {useCase.title} in Aktion
                               </p>
@@ -215,7 +206,7 @@ const AiSmartDeskPage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Einer, der{" "}
               <span className="  text-slate-300">nie Pause macht</span>
             </h2>
@@ -235,9 +226,7 @@ const AiSmartDeskPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Clock className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
-                24/7 Erreichbarkeit
-              </h3>
+              <h3 className="text-lg  text-white mb-3">24/7 Erreichbarkeit</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Immer für Kunden da – selbst abends, am Wochenende oder an
                 Feiertagen
@@ -254,7 +243,7 @@ const AiSmartDeskPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <CheckCircle className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Plug & Play</h3>
+              <h3 className="text-lg  text-white mb-3">Plug & Play</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Direkt im Placetel Portal aktivieren – ganz ohne technische
                 Hürden
@@ -271,9 +260,7 @@ const AiSmartDeskPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Phone className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
-                Perfekt integriert
-              </h3>
+              <h3 className="text-lg  text-white mb-3">Perfekt integriert</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Nahtlos in die Placetel Telefonanlage integriert – alles in
                 einem System
@@ -290,9 +277,7 @@ const AiSmartDeskPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Users className="w-8 h-8 text-orange-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
-                80% Automatisierung
-              </h3>
+              <h3 className="text-lg  text-white mb-3">80% Automatisierung</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Übernimmt bis zu 80% der Anrufe vollautomatisch und rund um die
                 Uhr
@@ -312,7 +297,7 @@ const AiSmartDeskPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl  text-white mb-6">
                 Einrichtung direkt im
                 <br />
                 <span className="  text-slate-300">Kundenportal</span>
@@ -326,10 +311,7 @@ const AiSmartDeskPage = () => {
                 und ist sofort startklar – ganz ohne technische Hürden.
               </p>
 
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
+              <Button size="lg">
                 Kostenlos testen
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -343,7 +325,7 @@ const AiSmartDeskPage = () => {
             >
               <Card className="border-slate-700 bg-slate-900/50">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-white mb-6">
+                  <h3 className="text-xl  text-white mb-6">
                     In wenigen Schritten eingerichtet:
                   </h3>
 
@@ -351,13 +333,11 @@ const AiSmartDeskPage = () => {
                     {setupSteps.map((step, index) => (
                       <div key={index} className="flex items-center">
                         <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                          <span className="text-white font-bold text-sm">
+                          <span className="text-white  text-sm">
                             {index + 1}
                           </span>
                         </div>
-                        <span className="text-slate-300 font-medium">
-                          {step}
-                        </span>
+                        <span className="text-slate-300 ">{step}</span>
                       </div>
                     ))}
                   </div>
@@ -377,7 +357,7 @@ const AiSmartDeskPage = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Bereit für{" "}
               <span className="  text-slate-300">smarte Kommunikation?</span>
             </h2>
@@ -386,17 +366,8 @@ const AiSmartDeskPage = () => {
               ganz ohne zusätzlichen Aufwand im Team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
-                Kostenlos testen
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 text-lg px-8 py-4 h-14 bg-transparent"
-              >
+              <Button size="lg">Kostenlos testen</Button>
+              <Button size="lg" variant="outline">
                 Demo Call buchen
               </Button>
             </div>

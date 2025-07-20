@@ -91,7 +91,7 @@ export default function LandingPage() {
               className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60"
             >
               {companies.map((company, index) => (
-                <div key={index} className="text-slate-400 font-medium text-lg">
+                <div key={index} className="text-slate-400  text-lg">
                   {company}
                 </div>
               ))}
@@ -114,7 +114,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Zwei Lösungen.
               <br />
               <span className="  text-slate-300">
@@ -141,9 +141,7 @@ export default function LandingPage() {
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">
-                        AI SmartDesk
-                      </h3>
+                      <h3 className="text-2xl  text-white">AI SmartDesk</h3>
                       <p className="text-slate-400">Plug & Play Lösung</p>
                     </div>
                   </div>
@@ -195,7 +193,7 @@ export default function LandingPage() {
                       <Zap className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">AI Pro</h3>
+                      <h3 className="text-2xl  text-white">AI Pro</h3>
                       <p className="text-slate-400">Maximale Flexibilität</p>
                     </div>
                   </div>
@@ -244,7 +242,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Warum Placetel AI?
             </h2>
             <p className="text-xl text-slate-400">
@@ -263,9 +261,7 @@ export default function LandingPage() {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Clock className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">
-                24/7 Erreichbarkeit
-              </h3>
+              <h3 className="text-xl  text-white mb-4">24/7 Erreichbarkeit</h3>
               <p className="text-slate-400 leading-relaxed">
                 Ihre Kunden erreichen Sie immer – auch außerhalb der
                 Öffnungszeiten, am Wochenende und an Feiertagen.
@@ -282,9 +278,7 @@ export default function LandingPage() {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Users className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">
-                Team entlasten
-              </h3>
+              <h3 className="text-xl  text-white mb-4">Team entlasten</h3>
               <p className="text-slate-400 leading-relaxed">
                 Bis zu 80% der Anrufe werden automatisch bearbeitet. Mehr Zeit
                 für die Gespräche, die wirklich zählen.
@@ -301,9 +295,7 @@ export default function LandingPage() {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Zap className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">
-                Sofort startklar
-              </h3>
+              <h3 className="text-xl  text-white mb-4">Sofort startklar</h3>
               <p className="text-slate-400 leading-relaxed">
                 Keine komplizierte Installation. Aktivierung direkt im Placetel
                 Portal – in wenigen Minuten einsatzbereit.
@@ -324,7 +316,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Bereit für <span className=" ">smarte Kommunikation?</span>
             </h2>
             <p className="text-xl text-slate-400 mb-8 leading-relaxed">
@@ -332,17 +324,8 @@ export default function LandingPage() {
               ganz ohne zusätzlichen Aufwand im Team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
-                Kostenlos testen
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 text-lg px-8 py-4 h-14 bg-transparent"
-              >
+              <Button size="lg">Kostenlos testen</Button>
+              <Button size="lg" variant="outline">
                 Demo Call buchen
               </Button>
             </div>

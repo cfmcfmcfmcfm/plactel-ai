@@ -71,7 +71,7 @@ const AiProPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-none">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl  text-white mb-8 leading-none">
                 Flexibler AI-Agent für
                 <br />
                 <span className="text-slate-300">komplexe Anforderungen</span>
@@ -95,18 +95,11 @@ const AiProPage = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
+              <Button size="lg">
                 Beta-Zugang anfordern
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 text-lg px-8 py-4 h-14 bg-transparent"
-              >
+              <Button size="lg" variant="outline">
                 Demo Call buchen
               </Button>
             </motion.div>
@@ -124,7 +117,7 @@ const AiProPage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Flexibilität bis ins
               <br />
               <span className="  text-slate-300">kleinste Detail</span>
@@ -149,7 +142,7 @@ const AiProPage = () => {
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-4">
+                    <h3 className="text-xl  text-white mb-4">
                       {feature.title}
                     </h3>
 
@@ -175,7 +168,7 @@ const AiProPage = () => {
               viewport={{ once: true }}
             >
               <div className="bg-slate-800 rounded-2xl p-8 mb-8 border border-slate-700">
-                <h3 className="text-xl font-bold text-white mb-4">
+                <h3 className="text-xl  text-white mb-4">
                   Use Case: Automatisierte Koordination von
                   Rauchwarnmelder-Wartungen
                 </h3>
@@ -189,7 +182,7 @@ const AiProPage = () => {
               </div>
 
               <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-                <h4 className="text-lg font-bold text-white mb-4 flex items-center">
+                <h4 className="text-lg  text-white mb-4 flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   Lösung mit Placetel AI Pro
                 </h4>
@@ -224,15 +217,13 @@ const AiProPage = () => {
                     <div className="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Play className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      Demo Call
-                    </h3>
+                    <h3 className="text-xl  text-white mb-2">Demo Call</h3>
                     <p className="text-slate-400">Sehen Sie AI Pro in Aktion</p>
                   </div>
 
                   <div className=" rounded-xl p-6 mb-6 border border-slate-700">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm font-medium text-slate-400">
+                      <span className="text-sm  text-slate-400">
                         Workflow Beispiel
                       </span>
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -281,7 +272,7 @@ const AiProPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl  text-white mb-6">
                 <span className="  text-slate-300">Visueller</span> Editor
               </h2>
               <p className="text-xl text-slate-400 mb-6 leading-relaxed">
@@ -317,10 +308,7 @@ const AiProPage = () => {
                 </div>
               </div>
 
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
+              <Button size="lg">
                 Jetzt ausprobieren
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -337,9 +325,7 @@ const AiProPage = () => {
                   <div className=" p-4 flex items-center justify-between border-b border-slate-700">
                     <div className="flex items-center space-x-2">
                       <Code className="w-5 h-5 text-white" />
-                      <span className="text-white font-medium">
-                        Visual Editor
-                      </span>
+                      <span className="text-white ">Visual Editor</span>
                     </div>
                     <div className="flex space-x-2">
                       <div className="w-3 h-3 bg-red-400 rounded-full"></div>
@@ -356,7 +342,7 @@ const AiProPage = () => {
                         </div>
                         <div className="flex-1">
                           <div className="bg-slate-700 rounded-lg p-3 shadow-sm border border-slate-600">
-                            <span className="text-sm font-medium text-slate-200">
+                            <span className="text-sm  text-slate-200">
                               Anruf entgegennehmen
                             </span>
                           </div>
@@ -369,7 +355,7 @@ const AiProPage = () => {
                         </div>
                         <div className="flex-1">
                           <div className="bg-slate-700 rounded-lg p-3 shadow-sm border border-slate-600">
-                            <span className="text-sm font-medium text-slate-200">
+                            <span className="text-sm  text-slate-200">
                               Anliegen klassifizieren
                             </span>
                           </div>
@@ -382,7 +368,7 @@ const AiProPage = () => {
                         </div>
                         <div className="flex-1">
                           <div className="bg-slate-700 rounded-lg p-3 shadow-sm border border-slate-600">
-                            <span className="text-sm font-medium text-slate-200">
+                            <span className="text-sm  text-slate-200">
                               CRM-System abfragen
                             </span>
                           </div>
@@ -395,7 +381,7 @@ const AiProPage = () => {
                         </div>
                         <div className="flex-1">
                           <div className="bg-slate-700 rounded-lg p-3 shadow-sm border border-slate-600">
-                            <span className="text-sm font-medium text-slate-200">
+                            <span className="text-sm  text-slate-200">
                               Aktion ausführen
                             </span>
                           </div>
@@ -420,7 +406,7 @@ const AiProPage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Automatisierte Kommunikation
               <br />
               <span className="  text-slate-300">auf höchstem Niveau</span>
@@ -441,7 +427,7 @@ const AiProPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Settings className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
+              <h3 className="text-lg  text-white mb-3">
                 Vollständig anpassbar
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
@@ -460,9 +446,7 @@ const AiProPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Database className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
-                System-Integration
-              </h3>
+              <h3 className="text-lg  text-white mb-3">System-Integration</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Nahtlose Anbindung an CRM, Datenbanken und bestehende Tools
               </p>
@@ -478,7 +462,7 @@ const AiProPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Users className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Skalierbar</h3>
+              <h3 className="text-lg  text-white mb-3">Skalierbar</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Wächst mit Ihrem Unternehmen und passt sich an veränderte
                 Anforderungen an
@@ -495,9 +479,7 @@ const AiProPage = () => {
               <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-slate-600 transition-colors duration-300">
                 <Clock className="w-8 h-8 text-orange-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
-                Sofort einsatzbereit
-              </h3>
+              <h3 className="text-lg  text-white mb-3">Sofort einsatzbereit</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Schnelle Implementierung ohne lange Einrichtungszeiten
               </p>
@@ -515,7 +497,7 @@ const AiProPage = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Bereit für komplexe
               <br />
               <span className="  text-slate-300">AI-Automatisierung?</span>
@@ -525,17 +507,8 @@ const AiProPage = () => {
               auch die komplexesten Kommunikationsprozesse in Ihrem Unternehmen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
-                Beta-Zugang anfordern
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 text-lg px-8 py-4 h-14 bg-transparent"
-              >
+              <Button size="lg">Beta-Zugang anfordern</Button>
+              <Button size="lg" variant="outline">
                 Demo Call buchen
               </Button>
             </div>

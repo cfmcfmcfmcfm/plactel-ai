@@ -19,7 +19,7 @@ const Summary = ({
   return (
     <div className="flex justify-between border-b border-slate-700 pb-3">
       <span className="text-slate-400">{label}</span>
-      <span className="font-semibold text-white">{value}</span>
+      <span className=" text-white">{value}</span>
     </div>
   );
 };
@@ -104,7 +104,7 @@ const RoiCalculator = () => {
           <div className="w-16 h-16 bg-slate-800/50 rounded-2xl flex items-center justify-center mx-auto mb-8">
             <Calculator className="w-8 h-8 text-blue-400" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl  text-white mb-6">
             ROI <span className="text-slate-300">Rechner</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
@@ -120,12 +120,10 @@ const RoiCalculator = () => {
           viewport={{ once: true }}
         >
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8">
-              Ihre Parameter
-            </h3>
+            <h3 className="text-2xl  text-white mb-8">Ihre Parameter</h3>
             <div className="space-y-8">
               <div className="space-y-3">
-                <Label className="text-slate-300 text-base font-medium">
+                <Label className="text-slate-300 text-base ">
                   Tägliche Anrufe
                 </Label>
                 <Slider
@@ -145,7 +143,7 @@ const RoiCalculator = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <Label className="text-slate-300 text-base font-medium">
+                  <Label className="text-slate-300 text-base ">
                     Dauer pro Anruf (Min)
                   </Label>
                   <Input
@@ -159,7 +157,7 @@ const RoiCalculator = () => {
                   />
                 </div>
                 <div className="space-y-3">
-                  <Label className="text-slate-300 text-base font-medium">
+                  <Label className="text-slate-300 text-base ">
                     Stundensatz Mitarbeiter (€)
                   </Label>
                   <Input
@@ -187,7 +185,7 @@ const RoiCalculator = () => {
               <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl  text-white">
                 Ihr monatlicher AI-Mehrwert
               </h3>
             </div>
@@ -215,19 +213,12 @@ const RoiCalculator = () => {
               />
               <div className="flex justify-between border-b border-slate-700 pb-3">
                 <span className="text-slate-400">Return on AI-Investment</span>
-                <span className="font-bold text-2xl text-green-400">
-                  {roi}×
-                </span>
+                <span className=" text-2xl text-green-400">{roi}×</span>
               </div>
             </div>
 
             <div className="mt-8 space-y-3">
-              <Button
-                className="w-full bg-white text-slate-900 hover:bg-slate-100 font-semibold"
-                size="lg"
-              >
-                Jetzt unverbindlich beraten lassen
-              </Button>
+              <Button size="lg">Jetzt unverbindlich beraten lassen</Button>
               <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" onClick={downloadPNG}>
                   <Download className="w-4 h-4 mr-2" />

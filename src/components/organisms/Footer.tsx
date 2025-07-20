@@ -11,14 +11,14 @@ const Footer = () => {
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                 <Bot className="w-5 h-5 text-slate-900" />
               </div>
-              <span className="text-xl font-bold">Placetel AI</span>
+              <span className="text-xl ">Placetel AI</span>
             </Link>
             <p className="text-slate-400">
               Die Zukunft der Geschäftstelefonie ist AI.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-white">Produkte</h4>
+            <h4 className=" mb-4 text-white">Produkte</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
                 <Link
@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-white">Unternehmen</h4>
+            <h4 className=" mb-4 text-white">Unternehmen</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -54,7 +54,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-white">Legal</h4>
+            <h4 className=" mb-4 text-white">Legal</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">

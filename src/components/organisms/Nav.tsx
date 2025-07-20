@@ -11,8 +11,8 @@ const Nav = () => {
         <ul className="flex gap-12 items-center">
           <div className="flex items-center">
             <Button variant="ghost">
-              <Link href="/ai-agents">
-                <li>Ai Agents</li>
+              <Link href="/ai-smartdesk">
+                <li>Ai SmartDesk</li>
               </Link>
             </Button>
 

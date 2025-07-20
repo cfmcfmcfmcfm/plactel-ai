@@ -1,15 +1,30 @@
-// pages/index.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
-const AiAgents = () => {
+const AiSmartDeskPage = () => {
   return (
-    <div className="min-h-screen text-gray-900 font-sans">
+    <div className="min-h-screen font-sans">
       {/* Hero Section */}
       <section className="px-6 py-32 text-center justify-center w-full items-center gap-8 flex flex-col">
         <div className="flex flex-col gap-8 max-w-4xl text-balance">
+          <motion.ul className="flex gap-8 items-center justify-center">
+            <li>
+              <div className="h-[1em] w-[1em] bg-accent-primary rounded-full inline-flex mr-1 translate-y-0.5"></div>
+              80% automatisiert
+            </li>
+            <li>
+              <div className="h-[1em] w-[1em] bg-accent-primary rounded-full inline-flex mr-1 translate-y-0.5"></div>
+              Echtzeit-AI
+            </li>
+
+            <li>
+              <div className="h-[1em] w-[1em] bg-accent-primary rounded-full inline-flex mr-1 translate-y-0.5"></div>
+              Sofort einsetzbar
+            </li>
+          </motion.ul>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,13 +51,15 @@ const AiAgents = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <Button size="lg">Jetzt kostenlos testen</Button>
+            <Button size="lg" variant="secondary">
+              Jetzt kostenlos testen
+            </Button>
           </motion.div>
         </div>
       </section>
 
       {/* Problem / Lösung Section */}
-      <section className="bg-gray-50 py-20 px-6">
+      <section className="bg-gray-50 text-black py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-6">
             Ihre Kunden rufen an. Ihr Team ist am Limit?
@@ -109,9 +126,9 @@ const AiAgents = () => {
       </section>
 
       {/* USP Section */}
-      <section className="bg-gray-100 py-20 px-6">
+      <section className="bg-gray-100 text-black py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold hover:font-extrabold transition-all mb-10">
+          <h2 className="text-3xl  font-semibold hover:font-extrabold transition-all mb-10">
             Ihre Vorteile mit dem SmartDesk
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -151,4 +168,4 @@ const AiAgents = () => {
   );
 };
 
-export default AiAgents;
+export default AiSmartDeskPage;

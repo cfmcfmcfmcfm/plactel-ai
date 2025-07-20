@@ -1,7 +1,14 @@
-import AiPro from "@/components/pages/AiPro";
+import AiProPage from "@/components/pages/AiProPage";
+import { Metadata } from "next";
 
-const AiProPage = () => {
-  return <AiPro />;
+export const metadata: Metadata = {
+  title: "Placetel AI Pro – Individuelle AI-Sprachdialoge für dein Business",
+  description:
+    "Mit AI Pro entwickelst du maßgeschneiderte Sprachdialoge für komplexe Anforderungen. Nahtlos integriert – für Unternehmen mit besonderen Prozessen.",
 };
 
-export default AiProPage;
+const AiPro = () => {
+  return <AiProPage />;
+};
+
+export default AiPro;

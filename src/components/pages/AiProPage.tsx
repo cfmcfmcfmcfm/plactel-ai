@@ -3,7 +3,7 @@ import RoiCalculator from "@/components/molecules/RoiCalculator";
 import IterativSection from "../molecules/IterativSection";
 // import SharedLayoutAnimation from "../molecules/TabTest";
 
-const AiPro = () => {
+const AiProPage = () => {
   return (
     <>
       <RoiCalculator />
@@ -13,4 +13,4 @@ const AiPro = () => {
   );
 };
 
-export default AiPro;
+export default AiProPage;

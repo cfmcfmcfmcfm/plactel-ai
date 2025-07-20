@@ -5,7 +5,8 @@ import Nav from "@/components/organisms/Nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import BgGrid from "@/components/atoms/BgGrid";
+import InteractiveBackground from "@/components/atoms/BgGrid";
+// import BgGrid from "@/components/atoms/BgGrid";
 
 const whyte = localFont({
   src: "../fonts/ABCWhyteVariable-Trial.woff2",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     title: "Placetel AI – Die neue Ära der Business-Telefonie",
     description:
       "Intelligente Sprachassistenten, sofort einsatzbereit – direkt integriert in deine Telefonanlage.",
-    url: "https://deine-domain.de",
+    url: "https://placetel.ai",
     type: "website",
     images: [
       {
@@ -44,7 +45,8 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <BgGrid />
+        {/* <BgGrid /> */}
+        <InteractiveBackground />
       </body>
     </html>
   );

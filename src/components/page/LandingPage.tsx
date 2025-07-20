@@ -54,8 +54,8 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-none">
-                Die #1 AI-Lösung
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-none text-slate-300">
+                Die <span className="text-white">#1 AI-Lösung</span>
                 <br />
                 für{" "}
                 <span className="bg-gradient-to-r from-blue-500 from-20% via-violet-300 to-green-300 inline-block text-transparent bg-clip-text">

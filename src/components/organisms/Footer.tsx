@@ -1,4 +1,3 @@
-import { Bot } from "lucide-react";
 import Link from "next/link";
 import Logo from "../atoms/Logo";
 

@@ -78,7 +78,7 @@ const AiSmartDeskPage = () => {
               <h1 className="font-light text-5xl md:text-7xl lg:text-8xl  text-white mb-8 leading-none">
                 Intelligente Telefonie
                 <br />
-                <span className="  text-slate-300">auf Knopfdruck</span>
+                <span className="text-slate-300">auf Knopfdruck</span>
               </h1>
             </motion.div>
 

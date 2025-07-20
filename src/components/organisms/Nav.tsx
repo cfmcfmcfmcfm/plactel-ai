@@ -1,8 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Bot } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="border-b border-slate-800 /80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,12 +23,25 @@ const Nav = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/ai-smartdesk"
-              className="text-slate-300 hover:text-white transition-colors"
+              className={cn(
+                "hover:text-accent-primary transition-colors",
+                pathname === "/ai-smartdesk"
+                  ? "text-accent-primary"
+                  : "text-slate-300"
+              )}
             >
               AI SmartDesk
             </Link>
 
-            <Link href="/ai-pro" className="text-purple-400 font-medium">
+            <Link
+              href="/ai-pro"
+              className={cn(
+                "hover:text-accent-secondary transition-colors",
+                pathname === "/ai-pro"
+                  ? "text-accent-secondary"
+                  : "text-slate-300"
+              )}
+            >
               AI Pro
             </Link>
 

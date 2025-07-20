@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import RoiCalculator from "../molecules/RoiCalculator";
 
 export default function LandingPage() {
   const companies = [
@@ -44,24 +45,24 @@ export default function LandingPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-wrap justify-center gap-8 mb-4 text-slate-400 text-sm uppercase tracking-wider"
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
-                Die #1 AI-Lösung
-                <br />
-                für <span className=" ">Geschäftstelefonie</span>
-              </h1>
+              <span>#1 in Kundenzufriedenheit</span>
+              <span>#1 in Automatisierung</span>
+              <span>#1 Bewertung bei G2</span>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-8 mb-12 text-slate-400 text-sm uppercase tracking-wider"
+              transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <span>#1 in Kundenzufriedenheit</span>
-              <span>#1 in Automatisierung</span>
-              <span>#1 Bewertung bei G2</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-none">
+                Die #1 AI-Lösung
+                <br />
+                für <span className=" ">Geschäftstelefonie</span>
+              </h1>
             </motion.div>
 
             <motion.div
@@ -314,6 +315,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <RoiCalculator />
 
       {/* CTA Section */}
       <section className="py-20 ">

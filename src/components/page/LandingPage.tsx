@@ -3,14 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  Phone,
-  Users,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Check, Clock, Phone, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import RoiCalculator from "../molecules/RoiCalculator";
 
@@ -84,18 +77,26 @@ export default function LandingPage() {
             </motion.div>
 
             {/* Company Logos */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60"
-            >
-              {companies.map((company, index) => (
-                <div key={index} className="text-slate-400  text-lg">
-                  {company}
-                </div>
-              ))}
-            </motion.div>
+            <div className="relative overflow-hidden">
+              <div className="flex animate-marquee whitespace-nowrap w-max">
+                {companies.map((company, index) => (
+                  <div
+                    key={index}
+                    className="text-slate-400 font-medium text-lg mx-8 md:mx-12"
+                  >
+                    {company}
+                  </div>
+                ))}
+                {companies.map((company, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="text-slate-400 font-medium text-lg mx-8 md:mx-12"
+                  >
+                    {company}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -154,15 +155,15 @@ export default function LandingPage() {
 
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <Check className="w-5 h-5 text-green-400 mr-3" />
                       <span>Übernimmt bis zu 80% der Anrufe automatisch</span>
                     </div>
                     <div className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <Check className="w-5 h-5 text-green-400 mr-3" />
                       <span>Einrichtung direkt im Placetel Portal</span>
                     </div>
                     <div className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <Check className="w-5 h-5 text-green-400 mr-3" />
                       <span>
                         Perfekt integriert in bestehende Telefonanlage
                       </span>
@@ -206,15 +207,15 @@ export default function LandingPage() {
 
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <Check className="w-5 h-5 text-green-400 mr-3" />
                       <span>Eigene Voicebots für individuelle Anliegen</span>
                     </div>
                     <div className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <Check className="w-5 h-5 text-green-400 mr-3" />
                       <span>Visueller Editor für Gesprächsverläufe</span>
                     </div>
                     <div className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <Check className="w-5 h-5 text-green-400 mr-3" />
                       <span>Integration in CRM und Datenbanken</span>
                     </div>
                   </div>

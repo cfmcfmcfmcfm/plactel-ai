@@ -7,7 +7,7 @@ import {
   Settings,
   Database,
   MessageSquare,
-  CheckCircle,
+  Check,
   Play,
   Code,
   Users,
@@ -183,7 +183,7 @@ const AiProPage = () => {
 
               <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
                 <h4 className="text-lg  text-white mb-4 flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  <Check className="w-5 h-5 text-green-400 mr-2" />
                   Lösung mit Placetel AI Pro
                 </h4>
                 <p className="text-slate-300 mb-4 leading-relaxed">
@@ -197,7 +197,7 @@ const AiProPage = () => {
                       key={index}
                       className="flex items-center text-slate-300"
                     >
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-sm">{capability}</span>
                     </div>
                   ))}
@@ -289,21 +289,21 @@ const AiProPage = () => {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center text-slate-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <Check className="w-5 h-5 text-green-400 mr-3" />
                   <span>
                     Einfache visuelle Übersicht zum Anlegen und Bearbeiten Ihrer
                     Bots
                   </span>
                 </div>
                 <div className="flex items-center text-slate-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <Check className="w-5 h-5 text-green-400 mr-3" />
                   <span>
                     Mehrere Bots einfach parallel erstellen und miteinander
                     vernetzen
                   </span>
                 </div>
                 <div className="flex items-center text-slate-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <Check className="w-5 h-5 text-green-400 mr-3" />
                   <span>Volle Kontrolle über das Finetuning Ihrer Bots</span>
                 </div>
               </div>
@@ -377,7 +377,7 @@ const AiProPage = () => {
 
                       <div className="flex items-center space-x-4 ml-8">
                         <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-                          <CheckCircle className="w-6 h-6 text-white" />
+                          <Check className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
                           <div className="bg-slate-700 rounded-lg p-3 shadow-sm border border-slate-600">

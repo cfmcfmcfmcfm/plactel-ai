@@ -113,7 +113,7 @@ const RoiCalculator = () => {
         </motion.div>
 
         <motion.div
-          className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 md:p-12 grid md:grid-cols-2 gap-12 max-w-6xl mx-auto"
+          className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 md:p-12 grid md:grid-cols-2 gap-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -218,7 +218,9 @@ const RoiCalculator = () => {
             </div>
 
             <div className="mt-8 space-y-3">
-              <Button size="lg">Jetzt unverbindlich beraten lassen</Button>
+              <Button size="lg" className="w-full">
+                Jetzt unverbindlich beraten lassen
+              </Button>
               <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" onClick={downloadPNG}>
                   <Download className="w-4 h-4 mr-2" />

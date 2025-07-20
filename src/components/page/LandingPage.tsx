@@ -38,12 +38,12 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex flex-wrap text-center justify-center mb-8 border-y border-slate-700 text-slate-400 text-sm uppercase tracking-wider"
+              className="flex flex-col lg:flex-row text-center justify-center mb-8 border-y border-slate-700 text-slate-400 text-sm uppercase tracking-wider"
             >
-              <span className="min-w-72 border-r py-1 border-slate-700">
+              <span className="min-w-72 lg:border-r py-1 border-slate-700">
                 #1 in Kundenzufriedenheit
               </span>
-              <span className="min-w-72 border-r py-1 border-slate-700">
+              <span className="min-w-72 lg:border-r py-1 border-slate-700">
                 #1 in Automatisierung
               </span>
               <span className="min-w-72 py-1">#1 Bewertung bei G2</span>
@@ -54,7 +54,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-none text-slate-300">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-light mb-8 leading-none text-slate-300">
                 Die <span className="text-white">#1 AI-Lösung</span>
                 <br />
                 für{" "}

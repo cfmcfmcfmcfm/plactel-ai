@@ -46,16 +46,9 @@ const Nav = () => {
             </Link>
 
             <div className="flex gap-4">
-              <Button
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 bg-transparent"
-              >
-                Demo ansehen
-              </Button>
+              <Button variant="outline">Demo ansehen</Button>
 
-              <Button className="bg-white text-slate-900 hover:bg-slate-100">
-                Kostenlos testen
-              </Button>
+              <Button>Kostenlos testen</Button>
             </div>
           </div>
         </div>

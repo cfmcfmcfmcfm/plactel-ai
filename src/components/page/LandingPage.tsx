@@ -1,17 +1,16 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Phone,
-  Bot,
-  Zap,
-  Clock,
-  Users,
   CheckCircle,
+  Clock,
+  Phone,
+  Users,
+  Zap,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import RoiCalculator from "../molecules/RoiCalculator";
 
@@ -31,7 +30,7 @@ export default function LandingPage() {
       <section className="relative overflow-hidden py-20 lg:py-32 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -40,17 +39,21 @@ export default function LandingPage() {
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-8">
                 <Bot className="w-8 h-8 text-slate-900" />
               </div>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-8 mb-4 text-slate-400 text-sm uppercase tracking-wider"
+              className="flex flex-wrap text-center justify-center mb-8 border-y border-slate-700 text-slate-400 text-sm uppercase tracking-wider"
             >
-              <span>#1 in Kundenzufriedenheit</span>
-              <span>#1 in Automatisierung</span>
-              <span>#1 Bewertung bei G2</span>
+              <span className="min-w-72 border-r py-1 border-slate-700">
+                #1 in Kundenzufriedenheit
+              </span>
+              <span className="min-w-72 border-r py-1 border-slate-700">
+                #1 in Automatisierung
+              </span>
+              <span className="min-w-72 py-1">#1 Bewertung bei G2</span>
             </motion.div>
 
             <motion.div
@@ -58,10 +61,13 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-none">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-none">
                 Die #1 AI-Lösung
                 <br />
-                für <span className=" ">Geschäftstelefonie</span>
+                für{" "}
+                <span className="bg-gradient-to-r from-blue-500 from-20% via-violet-300 to-green-300 inline-block text-transparent bg-clip-text">
+                  Geschäftstelefonie
+                </span>
               </h1>
             </motion.div>
 
@@ -71,17 +77,8 @@ export default function LandingPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
             >
-              <Button
-                size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 text-lg px-8 py-4 h-14"
-              >
-                Kostenlos testen
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 text-lg px-8 py-4 h-14 bg-transparent"
-              >
+              <Button size="lg">Kostenlos testen</Button>
+              <Button size="lg" variant="outline">
                 Demo ansehen
               </Button>
             </motion.div>
@@ -248,7 +245,7 @@ export default function LandingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Warum <span className=" ">Placetel AI?</span>
+              Warum Placetel AI?
             </h2>
             <p className="text-xl text-slate-400">
               Einfach. Intelligent. Sofort einsetzbar.

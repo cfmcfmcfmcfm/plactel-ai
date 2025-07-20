@@ -92,7 +92,7 @@ const RoiCalculator = () => {
   };
 
   return (
-    <section className="py-20 bg-slate-900">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ const RoiCalculator = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-8">
+          <div className="w-16 h-16 bg-slate-800/50 rounded-2xl flex items-center justify-center mx-auto mb-8">
             <Calculator className="w-8 h-8 text-blue-400" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -229,19 +229,11 @@ const RoiCalculator = () => {
                 Jetzt unverbindlich beraten lassen
               </Button>
               <div className="grid grid-cols-2 gap-3">
-                <Button
-                  variant="outline"
-                  onClick={downloadPNG}
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white bg-transparent"
-                >
+                <Button variant="outline" onClick={downloadPNG}>
                   <Download className="w-4 h-4 mr-2" />
                   Als Bild
                 </Button>
-                <Button
-                  variant="outline"
-                  onClick={downloadCSV}
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white bg-transparent"
-                >
+                <Button variant="outline" onClick={downloadCSV}>
                   <FileText className="w-4 h-4 mr-2" />
                   CSV Export
                 </Button>

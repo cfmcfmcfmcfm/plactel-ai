@@ -5,6 +5,7 @@ import Nav from "@/components/organisms/Nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import BgGrid from "@/components/atoms/BgGrid";
 
 const whyte = localFont({
   src: "../fonts/ABCWhyteVariable-Trial.woff2",
@@ -43,7 +44,7 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        {/* <BgGrid /> */}
+        <BgGrid />
       </body>
     </html>
   );

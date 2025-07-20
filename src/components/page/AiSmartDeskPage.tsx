@@ -197,7 +197,7 @@ const AiSmartDeskPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -349,7 +349,7 @@ const AiSmartDeskPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

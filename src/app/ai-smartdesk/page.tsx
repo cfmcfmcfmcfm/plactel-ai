@@ -1,4 +1,4 @@
-import AiSmartDeskPage from "@/components/pages/AiSmartDeskPage";
+import AiSmartDeskPage from "@/components/page/AiSmartDeskPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

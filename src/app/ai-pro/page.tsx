@@ -1,4 +1,4 @@
-import AiProPage from "@/components/pages/AiProPage";
+import AiProPage from "@/components/page/AiProPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

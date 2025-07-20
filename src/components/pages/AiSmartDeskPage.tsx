@@ -11,16 +11,16 @@ const AiSmartDeskPage = () => {
         <div className="flex flex-col gap-8 max-w-4xl text-balance">
           <motion.ul className="flex gap-8 items-center justify-center">
             <li>
-              <div className="h-[1em] w-[1em] bg-accent-primary rounded-full inline-flex mr-1 translate-y-0.5"></div>
+              <div className="h-[1em] w-[1em] bg-gradient-to-br from-accent-primary to-accent-secondary rounded-full inline-flex mr-1 translate-y-0.5"></div>
               80% automatisiert
             </li>
             <li>
-              <div className="h-[1em] w-[1em] bg-accent-primary rounded-full inline-flex mr-1 translate-y-0.5"></div>
+              <div className="h-[1em] w-[1em] bg-gradient-to-br from-accent-primary to-accent-secondary rounded-full inline-flex mr-1 translate-y-0.5"></div>
               Echtzeit-AI
             </li>
 
             <li>
-              <div className="h-[1em] w-[1em] bg-accent-primary rounded-full inline-flex mr-1 translate-y-0.5"></div>
+              <div className="h-[1em] w-[1em] bg-gradient-to-br from-accent-primary to-accent-secondary rounded-full inline-flex mr-1 translate-y-0.5"></div>
               Sofort einsetzbar
             </li>
           </motion.ul>

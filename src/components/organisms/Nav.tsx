@@ -1,44 +1,45 @@
+import { Button } from "@/components/ui/button";
+import { Bot } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import Logo from "../atoms/Logo";
 
 const Nav = () => {
   return (
-    <nav className="sticky inset-x-0 top-0 p-2 z-50">
-      <div className="w-full rounded-xl overflow-hidden bg-gray-800 px-4 py-3 text-gray-200 flex justify-between items-center">
-        <Logo />
+    <nav className="border-b border-slate-800 /80 backdrop-blur-sm sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+              <Bot className="w-5 h-5 text-slate-900" />
+            </div>
+            <span className="text-xl font-bold text-white">Placetel AI</span>
+          </Link>
 
-        <ul className="flex gap-12 items-center">
-          <div className="flex items-center">
-            <Button variant="ghost">
-              <Link href="/ai-smartdesk">
-                <li>Ai SmartDesk</li>
-              </Link>
-            </Button>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link
+              href="/ai-smartdesk"
+              className="text-slate-300 hover:text-white transition-colors"
+            >
+              AI SmartDesk
+            </Link>
 
-            <Button variant="ghost">
-              <Link href="/ai-pro">
-                <li>Ai Pro</li>
-              </Link>
-            </Button>
-          </div>
+            <Link href="/ai-pro" className="text-purple-400 font-medium">
+              AI Pro
+            </Link>
 
-          <div className="h-8 w-px bg-gray-400" />
-
-          <div className="flex gap-4 items-center">
-            <li>
-              <Button variant="outline">
-                <Link href="/">Contact Sales</Link>
+            <div className="flex gap-4">
+              <Button
+                variant="outline"
+                className="border-slate-600 text-white hover:bg-slate-800 bg-transparent"
+              >
+                Demo ansehen
               </Button>
-            </li>
 
-            <li>
-              <Button variant={"secondary"}>
-                <Link href="/">Start free trial</Link>
+              <Button className="bg-white text-slate-900 hover:bg-slate-100">
+                Kostenlos testen
               </Button>
-            </li>
+            </div>
           </div>
-        </ul>
+        </div>
       </div>
     </nav>
   );

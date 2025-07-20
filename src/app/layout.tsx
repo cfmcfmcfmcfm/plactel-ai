@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${whyte.variable} bg-gray-950 text-gray-100 font-sans antialiased relative`}
+        className={`${whyte.variable} bg-slate-950 text-gray-100 font-sans antialiased relative`}
       >
         <Nav />
         <main>{children}</main>

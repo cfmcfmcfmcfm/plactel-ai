@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, Clock, Phone, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import RoiCalculator from "../molecules/RoiCalculator";
+import ProductComparison from "../molecules/ProductComparison";
 
 export default function LandingPage() {
   const companies = [
@@ -101,8 +102,8 @@ export default function LandingPage() {
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+        {/* <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-1000"></div> */}
       </section>
 
       {/* Products Section */}
@@ -171,7 +172,10 @@ export default function LandingPage() {
                   </div>
 
                   <Link href="/smartdesk">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 group-hover:glow-effect transition-all duration-300">
+                    <Button
+                      size="lg"
+                      className="bg-blue-600 text-white hover:bg-blue-700 group-hover:glow-effect transition-all duration-300"
+                    >
                       Mehr erfahren
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -221,7 +225,10 @@ export default function LandingPage() {
                   </div>
 
                   <Link href="/pro">
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700 group-hover:glow-effect transition-all duration-300">
+                    <Button
+                      size="lg"
+                      className="bg-purple-600 hover:bg-purple-700 text-white group-hover:glow-effect transition-all duration-300"
+                    >
                       Mehr erfahren
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -307,6 +314,8 @@ export default function LandingPage() {
       </section>
 
       <RoiCalculator />
+
+      <ProductComparison />
 
       {/* CTA Section */}
       <section className="py-20 ">

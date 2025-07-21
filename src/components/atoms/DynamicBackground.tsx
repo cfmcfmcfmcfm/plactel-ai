@@ -30,7 +30,7 @@ const DynamicBackground = () => {
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-800" />
 
-      <div className="absolute inset-0 grid grid-cols-12 gap-0 w-full h-full pointer-events-none z-10 max-w-7xl mx-auto px-8">
+      <div className="absolute inset-0 grid gap-0 w-full h-full pointer-events-none z-10 max-w-7xl mx-auto grid-cols-6 sm:grid-cols-8 lg:grid-cols-12 px-4 sm:px-6 lg:px-8">
         {Array.from({ length: 12 }).map((_, i) => {
           return (
             <div

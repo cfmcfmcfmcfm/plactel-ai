@@ -50,9 +50,9 @@ const ProductComparison = () => {
           className="max-w-7xl mx-auto"
         >
           {/* Comparison Cards */}
-          <div className="grid md:grid-cols-2 gap-8 rounded-2xl">
+          <div className="grid md:grid-cols-2">
             {/* SmartDesk Card */}
-            <Card className="h-full border-slate-700 bg-slate-900/50 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group text-white">
+            <Card className="h-full border-r">
               <CardContent className="p-8 h-full flex flex-col justify-between items-start">
                 <div>
                   <div className="text-center mb-8">
@@ -96,7 +96,7 @@ const ProductComparison = () => {
             </Card>
 
             {/* Pro Card */}
-            <Card className="h-full border-slate-700 bg-slate-900/50 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group text-white">
+            <Card className="h-full">
               <CardContent className="p-8 h-full flex flex-col justify-between items-start">
                 <div>
                   <div className="text-center mb-8">

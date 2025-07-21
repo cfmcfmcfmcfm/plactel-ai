@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const InteractiveBackground = () => {
+const DynamicBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isClient, setIsClient] = useState(false);
 
@@ -29,6 +29,17 @@ const InteractiveBackground = () => {
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-800" />
+
+      <div className="absolute inset-0 grid grid-cols-12 gap-0 w-full h-full pointer-events-none z-10 max-w-7xl mx-auto px-8">
+        {Array.from({ length: 12 }).map((_, i) => {
+          return (
+            <div
+              key={i}
+              className="border-r first:border-l border-slate-800 relative"
+            />
+          );
+        })}
+      </div>
 
       {/* Interactive floating orbs - subtle and elegant */}
       <motion.div
@@ -112,4 +123,4 @@ const InteractiveBackground = () => {
   );
 };
 
-export default InteractiveBackground;
+export default DynamicBackground;

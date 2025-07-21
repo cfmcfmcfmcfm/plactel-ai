@@ -7,6 +7,7 @@ import { ArrowRight, Check, Clock, Phone, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import RoiCalculator from "../molecules/RoiCalculator";
 import ProductComparison from "../molecules/ProductComparison";
+// import VercelInspiredSection from "../molecules/VercelInspiredSection";
 
 export default function LandingPage() {
   const companies = [
@@ -24,17 +25,6 @@ export default function LandingPage() {
       <section className="relative overflow-hidden py-20 lg:py-32 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-8">
-                <Bot className="w-8 h-8 text-slate-900" />
-              </div>
-            </motion.div> */}
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -100,10 +90,6 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-
-        {/* Floating Elements */}
-        {/* <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-1000"></div> */}
       </section>
 
       {/* Products Section */}
@@ -128,7 +114,7 @@ export default function LandingPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-0">
             {/* AI SmartDesk Card */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -136,7 +122,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full border-slate-700 bg-slate-900/50 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
+              <Card className="h-full rounded-none border-y border-l-0 border-r border-slate-700 bg-slate-900/30 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
@@ -191,7 +177,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full border-slate-700 bg-slate-900/50 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
+              <Card className="h-full rounded-none border-y border-x-0 border-slate-700 bg-slate-900/30 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mr-4">
@@ -316,6 +302,8 @@ export default function LandingPage() {
       <RoiCalculator />
 
       <ProductComparison />
+
+      {/* <VercelInspiredSection /> */}
 
       {/* CTA Section */}
       <section className="py-20 ">

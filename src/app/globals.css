@@ -128,8 +128,6 @@
   }
 }
 
-/* globals.css */
-
 .animate-marquee {
   display: inline-flex;
   animation: marquee 25s linear infinite;

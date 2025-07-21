@@ -1,9 +1,9 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Check, Phone, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 const ProductComparison = () => {
   const smartDeskFeatures = [

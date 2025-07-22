@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Bot } from "lucide-react";
+import { ArrowRight, Phone, Bot, Check } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const PlayfulHero = () => {
@@ -18,7 +18,7 @@ const PlayfulHero = () => {
         position: { top: "7%", left: "10%" },
       },
       ai: {
-        text: "Termin für morgen um 14:00 gebucht ✓",
+        text: "Termin für morgen um 14:00 gebucht",
       },
     },
     {
@@ -27,7 +27,7 @@ const PlayfulHero = () => {
         position: { top: "8%", right: "9%" },
       },
       ai: {
-        text: "Öffnungszeiten: Mo-Fr 8-18 Uhr ✓",
+        text: "Öffnungszeiten: Mo-Fr 8-18 Uhr",
       },
     },
     {
@@ -36,7 +36,7 @@ const PlayfulHero = () => {
         position: { top: "60%", left: "5%" },
       },
       ai: {
-        text: "Verbinde Sie mit Abteilung XY ✓",
+        text: "Verbinde Sie mit Abteilung XY",
       },
     },
     {
@@ -45,7 +45,7 @@ const PlayfulHero = () => {
         position: { top: "70%", right: "2%" },
       },
       ai: {
-        text: "Rechnung per E-Mail versendet ✓",
+        text: "Rechnung per E-Mail versendet",
       },
     },
     {
@@ -54,7 +54,7 @@ const PlayfulHero = () => {
         position: { top: "40%", left: "4%" },
       },
       ai: {
-        text: "Ja, Placetel AI ist für Sie da ✓",
+        text: "Ja, Placetel AI ist für Sie da",
       },
     },
     {
@@ -63,7 +63,7 @@ const PlayfulHero = () => {
         position: { top: "30%", right: "12%" },
       },
       ai: {
-        text: "Entschuldigung, ich helfe sofort ✓",
+        text: "Entschuldigung, ich helfe sofort",
       },
     },
     {
@@ -72,7 +72,7 @@ const PlayfulHero = () => {
         position: { top: "80%", left: "15%" },
       },
       ai: {
-        text: "Natürlich, wie kann ich helfen? ✓",
+        text: "Natürlich, wie kann ich helfen?",
       },
     },
     {
@@ -81,7 +81,7 @@ const PlayfulHero = () => {
         position: { top: "50%", right: "3%" },
       },
       ai: {
-        text: "Wartungstermin eingetragen ✓",
+        text: "Wartungstermin eingetragen",
       },
     },
   ];
@@ -260,7 +260,8 @@ const PlayfulHero = () => {
                     className="bg-green-500/10 border border-green-500/20 rounded-lg p-3"
                   >
                     <p className="text-sm text-white">
-                      {messagePairs[index].ai.text}
+                      {messagePairs[index].ai.text}{" "}
+                      <Check className="ml-1 w-5 h-5 inline" />
                     </p>
                   </motion.div>
                 ))}
@@ -278,9 +279,10 @@ const PlayfulHero = () => {
               size="lg"
               className="bg-white text-slate-900 hover:bg-slate-100 shadow-xl"
             >
-              Jetzt ausprobieren
-              <ArrowRight className="ml-2 w-5 h-5" />
+              Kostenlos testen
+              <ArrowRight className="ml-1 w-5 h-5" />
             </Button>
+
             <Button
               size="lg"
               variant="outline"

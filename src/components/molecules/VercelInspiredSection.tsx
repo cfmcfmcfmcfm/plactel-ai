@@ -25,7 +25,7 @@ const VercelInspiredSection = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl">
+          <p className="text-xl text-slate-600 mb-8  max-w-2xl">
             Reduzieren Sie Wartezeiten, entlasten Sie Ihr Team und verbessern
             Sie die Kundenerfahrung mit intelligenten Voice Agents.
           </p>
@@ -56,7 +56,7 @@ const VercelInspiredSection = () => {
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   AI SmartDesk
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm ">
                   Plug & Play Voice Agent für wiederkehrende Anliegen.
                   Einrichtung in Minuten, ohne technische Hürden.
                 </p>
@@ -88,7 +88,7 @@ const VercelInspiredSection = () => {
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   AI Pro
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm ">
                   Vollständig anpassbare Enterprise-Lösung mit visueller
                   Workflow-Erstellung und System-Integration.
                 </p>

@@ -1,12 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Clock, Phone, Users, Zap } from "lucide-react";
-import Link from "next/link";
-import RoiCalculator from "../molecules/RoiCalculator";
+import { Clock, Users, Zap } from "lucide-react";
 import ProductComparison from "../molecules/ProductComparison";
+import RoiCalculator from "../molecules/RoiCalculator";
+// import PlayfulHero from "../molecules/PlayfulHero";
 // import VercelInspiredSection from "../molecules/VercelInspiredSection";
 
 export default function LandingPage() {
@@ -21,6 +20,8 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen ">
+      {/* <PlayfulHero /> */}
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,7 +136,7 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <p className="text-slate-300 mb-6 text-lg leading-relaxed">
+                  <p className="text-slate-300 mb-6 text-lg ">
                     24/7 Erreichbarkeit durch smarte Anrufannahme, Beantwortung
                     häufiger Fragen und gezielte Weiterleitung. Startklar in
                     wenigen Minuten.
@@ -190,7 +191,7 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <p className="text-slate-300 mb-6 text-lg leading-relaxed">
+                  <p className="text-slate-300 mb-6 text-lg ">
                     Flexibler AI-Agent für komplexe Anforderungen mit nahtloser
                     Integration in bestehende Systeme und maßgeschneiderten
                     Workflows.
@@ -257,7 +258,7 @@ export default function LandingPage() {
                 <Clock className="w-8 h-8 text-blue-400" />
               </div>
               <h3 className="text-xl  text-white mb-4">24/7 Erreichbarkeit</h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 ">
                 Ihre Kunden erreichen Sie immer – auch außerhalb der
                 Öffnungszeiten, am Wochenende und an Feiertagen.
               </p>
@@ -274,7 +275,7 @@ export default function LandingPage() {
                 <Users className="w-8 h-8 text-green-400" />
               </div>
               <h3 className="text-xl  text-white mb-4">Team entlasten</h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 ">
                 Bis zu 80% der Anrufe werden automatisch bearbeitet. Mehr Zeit
                 für die Gespräche, die wirklich zählen.
               </p>
@@ -291,7 +292,7 @@ export default function LandingPage() {
                 <Zap className="w-8 h-8 text-purple-400" />
               </div>
               <h3 className="text-xl  text-white mb-4">Sofort startklar</h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 ">
                 Keine komplizierte Installation. Aktivierung direkt im Placetel
                 Portal – in wenigen Minuten einsatzbereit.
               </p>
@@ -318,7 +319,7 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Bereit für <span className=" ">smarte Kommunikation?</span>
             </h2>
-            <p className="text-xl text-slate-400 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-400 mb-8 ">
               Testen Sie jetzt Placetel AI und verlieren Sie kein Gespräch –
               ganz ohne zusätzlichen Aufwand im Team.
             </p>

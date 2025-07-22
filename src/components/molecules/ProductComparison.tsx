@@ -60,7 +60,7 @@ const ProductComparison = () => {
                       <Phone className="w-6 h-6" />
                     </div>
                     <h3 className="text-2xl  mb-3">Placetel AI SmartDesk</h3>
-                    <p className="text-sm leading-relaxed mb-6 text-balance max-w-sm">
+                    <p className="text-sm  mb-6 text-balance max-w-sm">
                       Der einfachste Voice Agent auf dem Markt - ideal für
                       wiederkehrende Anliegen
                     </p>
@@ -110,7 +110,7 @@ const ProductComparison = () => {
                       <Zap className="w-6 h-6" />
                     </div>
                     <h3 className="text-2xl mb-3">Placetel AI Pro</h3>
-                    <p className="text-sm leading-relaxed mb-6 text-balance max-w-sm">
+                    <p className="text-sm  mb-6 text-balance max-w-sm">
                       Die flexible Enterprise-Lösung mit 100%
                       individualisierbaren Voice Agents
                     </p>

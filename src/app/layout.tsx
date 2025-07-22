@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${whyte.variable} bg-black text-gray-100 font-sans antialiased relative`}
+        className={`${whyte.variable} bg-black text-gray-100 font-sans antialiased relative selection:bg-blue-500 selection:text-white`}
       >
         <Nav />
         <main>{children}</main>

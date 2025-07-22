@@ -1,248 +1,215 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Phone,
-  Bot,
-  Clock,
-  AlertCircle,
-  Users,
-  Headphones,
-} from "lucide-react";
+import { ArrowRight, Phone, Bot } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const PlayfulHero = () => {
   const [showChaos, setShowChaos] = useState(true);
   const [currentPhase, setCurrentPhase] = useState(0);
+  const [activeResponses, setActiveResponses] = useState<number[]>([]);
 
-  const chaosMessages = [
+  // Customer inquiries and AI responses
+  const messagePairs = [
     {
-      text: "Warteschleife seit 20 Minuten...",
-      icon: Clock,
-      color: "bg-red-500",
-      position: { top: "15%", left: "10%" },
+      customer: {
+        text: "Hallo, ich brauche einen Termin für morgen",
+        position: { top: "7%", left: "10%" },
+      },
+      ai: {
+        text: "Termin für morgen um 14:00 gebucht ✓",
+      },
     },
     {
-      text: "Falsch verbunden!",
-      icon: AlertCircle,
-      color: "bg-orange-500",
-      position: { top: "25%", right: "15%" },
+      customer: {
+        text: "Wann haben Sie denn geöffnet?",
+        position: { top: "8%", right: "9%" },
+      },
+      ai: {
+        text: "Öffnungszeiten: Mo-Fr 8-18 Uhr ✓",
+      },
     },
     {
-      text: "Kunde ist genervt",
-      icon: Users,
-      color: "bg-red-400",
-      position: { top: "60%", left: "5%" },
+      customer: {
+        text: "Können Sie mich bitte weiterverbinden?",
+        position: { top: "60%", left: "5%" },
+      },
+      ai: {
+        text: "Verbinde Sie mit Abteilung XY ✓",
+      },
     },
     {
-      text: "Niemand da um 18:30",
-      icon: Clock,
-      color: "bg-gray-500",
-      position: { top: "70%", right: "10%" },
+      customer: {
+        text: "Ich habe eine Frage zu meiner Rechnung",
+        position: { top: "70%", right: "2%" },
+      },
+      ai: {
+        text: "Rechnung per E-Mail versendet ✓",
+      },
     },
     {
-      text: "Immer die gleichen Fragen",
-      icon: Headphones,
-      color: "bg-yellow-500",
-      position: { top: "40%", left: "20%" },
+      customer: {
+        text: "Ist jemand da? Hallo?",
+        position: { top: "40%", left: "4%" },
+      },
+      ai: {
+        text: "Ja, Placetel AI ist für Sie da ✓",
+      },
     },
     {
-      text: "Team überlastet",
-      icon: AlertCircle,
-      color: "bg-red-600",
-      position: { top: "30%", right: "25%" },
+      customer: {
+        text: "Ich warte schon 10 Minuten...",
+        position: { top: "30%", right: "12%" },
+      },
+      ai: {
+        text: "Entschuldigung, ich helfe sofort ✓",
+      },
     },
     {
-      text: "Anruf verpasst",
-      icon: Phone,
-      color: "bg-orange-600",
-      position: { top: "80%", left: "15%" },
+      customer: {
+        text: "Können Sie mir helfen?",
+        position: { top: "80%", left: "15%" },
+      },
+      ai: {
+        text: "Natürlich, wie kann ich helfen? ✓",
+      },
     },
     {
-      text: "Keine Weiterleitung",
-      icon: Users,
-      color: "bg-gray-600",
-      position: { top: "20%", left: "60%" },
-    },
-  ];
-
-  const organizedMessages = [
-    {
-      text: "24/7 erreichbar",
-      icon: Clock,
-      color: "bg-green-500",
-      position: { top: "20%", left: "15%" },
-    },
-    {
-      text: "Automatische Weiterleitung",
-      icon: ArrowRight,
-      color: "bg-blue-500",
-      position: { top: "30%", right: "20%" },
-    },
-    {
-      text: "80% weniger Anrufe",
-      icon: Users,
-      color: "bg-green-400",
-      position: { top: "60%", left: "10%" },
-    },
-    {
-      text: "Sofort einsatzbereit",
-      icon: Bot,
-      color: "bg-purple-500",
-      position: { top: "70%", right: "15%" },
+      customer: {
+        text: "Ich rufe wegen der Wartung an",
+        position: { top: "50%", right: "3%" },
+      },
+      ai: {
+        text: "Wartungstermin eingetragen ✓",
+      },
     },
   ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentPhase(1);
+
+      // Start showing AI responses one by one
+      messagePairs.forEach((_, index) => {
+        setTimeout(() => {
+          setActiveResponses((prev) => [...prev, index]);
+        }, index * 600); // Slower staggered appearance
+      });
+
+      // After all responses appear, move to final phase
       setTimeout(() => {
         setShowChaos(false);
         setCurrentPhase(2);
-      }, 1000);
-    }, 3000);
+      }, messagePairs.length * 600 + 1000);
+    }, 5000); // Chaos phase
 
     return () => clearTimeout(timer);
   }, []);
 
-  const resetAnimation = () => {
-    setShowChaos(true);
-    setCurrentPhase(0);
-    setTimeout(() => {
-      setCurrentPhase(1);
-      setTimeout(() => {
-        setShowChaos(false);
-        setCurrentPhase(2);
-      }, 1000);
-    }, 3000);
-  };
+  //   const resetAnimation = () => {
+  //     setShowChaos(true);
+  //     setCurrentPhase(0);
+  //     setActiveResponses([]);
+
+  //     setTimeout(() => {
+  //       setCurrentPhase(1);
+
+  //       // Start showing AI responses one by one
+  //       messagePairs.forEach((_, index) => {
+  //         setTimeout(() => {
+  //           setActiveResponses((prev) => [...prev, index]);
+  //         }, index * 600); // Slower staggered appearance
+  //       });
+
+  //       // After all responses appear, move to final phase
+  //       setTimeout(() => {
+  //         setShowChaos(false);
+  //         setCurrentPhase(2);
+  //       }, messagePairs.length * 600 + 1000);
+  //     }, 5000);
+  //   };
 
   return (
-    <section className="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 min-h-screen">
+    <section className="relative overflow-hidden py-20 lg:py-32 min-h-screen">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Chaos Phase */}
-        <AnimatePresence>
-          {showChaos &&
-            chaosMessages.map((message, index) => (
-              <motion.div
-                key={`chaos-${index}`}
-                initial={{ opacity: 0, scale: 0, rotate: -10 }}
-                animate={{
-                  opacity: currentPhase === 0 ? 1 : 0.3,
-                  scale: currentPhase === 0 ? 1 : 0.8,
-                  rotate: currentPhase === 0 ? Math.random() * 20 - 10 : -45,
-                  x: currentPhase === 1 ? Math.random() * 100 - 50 : 0,
-                  y: currentPhase === 1 ? Math.random() * 100 - 50 : 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  scale: 0,
-                  rotate: -90,
-                  transition: { duration: 0.8, delay: index * 0.1 },
-                }}
-                transition={{
-                  duration: 0.8,
-                  delay: index * 0.2,
-                  type: "spring",
-                  stiffness: 100,
-                }}
-                className="absolute"
-                style={message.position}
-              >
-                <div
-                  className={`${message.color} text-white px-4 py-3 rounded-2xl rounded-bl-sm shadow-lg max-w-xs relative transform hover:scale-105 transition-transform cursor-pointer`}
-                >
-                  <div className="flex items-center space-x-2 mb-1">
-                    <message.icon className="w-4 h-4" />
-                    <span className="text-xs font-medium opacity-80">
-                      Problem
-                    </span>
-                  </div>
-                  <p className="text-sm font-medium">{message.text}</p>
-                  <div className="absolute bottom-0 -left-2 w-4 h-4 bg-current transform rotate-45" />
-                </div>
-              </motion.div>
-            ))}
-        </AnimatePresence>
-
-        {/* Organized Phase */}
-        <AnimatePresence>
-          {!showChaos &&
-            organizedMessages.map((message, index) => (
-              <motion.div
-                key={`organized-${index}`}
-                initial={{ opacity: 0, scale: 0, y: 50 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  y: 0,
-                  rotate: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.15,
-                  type: "spring",
-                  stiffness: 120,
-                }}
-                className="absolute"
-                style={message.position}
-              >
-                <div
-                  className={`${message.color} text-white px-4 py-3 rounded-2xl rounded-bl-sm shadow-lg max-w-xs relative transform hover:scale-105 transition-transform cursor-pointer`}
-                >
-                  <div className="flex items-center space-x-2 mb-1">
-                    <message.icon className="w-4 h-4" />
-                    <span className="text-xs font-medium opacity-80">
-                      Lösung
-                    </span>
-                  </div>
-                  <p className="text-sm font-medium">{message.text}</p>
-                  <div className="absolute bottom-0 -left-2 w-4 h-4 bg-current transform rotate-45" />
-                </div>
-              </motion.div>
-            ))}
-        </AnimatePresence>
-
-        {/* Floating Phone Icons */}
-        {Array.from({ length: 8 }).map((_, i) => (
+        {/* Customer Inquiries */}
+        {messagePairs.map((pair, index) => (
           <motion.div
-            key={`phone-${i}`}
-            className="absolute opacity-5"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
+            key={`customer-${index}`}
+            initial={{ opacity: 0, scale: 0, rotate: -10 }}
             animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, -5, 0],
+              opacity: currentPhase === 2 ? 0.3 : 1, // Fade out slightly in final phase
+              scale: currentPhase === 0 ? [0.8, 1.2, 0.9, 1.1, 1] : 0.9, // Chaotic scaling
+              rotate:
+                currentPhase === 0
+                  ? [
+                      Math.random() * 40 - 20,
+                      Math.random() * 60 - 30,
+                      Math.random() * 40 - 20,
+                    ] // Wild rotation
+                  : Math.random() * 40 - 20,
+              x:
+                currentPhase === 1
+                  ? [0, Math.random() * 60 - 30, Math.random() * 40 - 20] // Chaotic movement
+                  : 0,
+              y:
+                currentPhase === 1
+                  ? [0, Math.random() * 60 - 30, Math.random() * 40 - 20] // Chaotic movement
+                  : 0,
             }}
             transition={{
-              duration: 4 + Math.random() * 2,
-              repeat: Number.POSITIVE_INFINITY,
-              delay: Math.random() * 2,
+              duration: currentPhase === 0 ? 0.6 : 1.2,
+              delay: showChaos ? index * 0.08 : 0,
+              //   type: "spring",
+              stiffness: currentPhase === 0 ? 200 : 80,
+              damping: currentPhase === 0 ? 15 : 20,
             }}
+            className="absolute z-20"
+            style={pair.customer.position}
           >
-            <Phone className="w-8 h-8 text-slate-300" />
+            <motion.div
+              animate={
+                currentPhase === 0
+                  ? {
+                      x: [0, -2, 2, -1, 1, 0],
+                      y: [0, 1, -1, 2, -2, 0],
+                    }
+                  : {}
+              }
+              transition={{
+                duration: 0.3,
+                repeat: currentPhase === 0 ? Number.POSITIVE_INFINITY : 0,
+                repeatDelay: Math.random() * 2,
+              }}
+              className="bg-blue-500 text-white px-4 py-3 rounded-2xl rounded-bl-sm shadow-lg max-w-xs relative transform hover:scale-105 transition-transform cursor-pointer"
+            >
+              <div className="flex items-center space-x-2 mb-1">
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                  <Phone className="w-3 h-3" />
+                </div>
+                <span className="text-xs font-medium opacity-80">Kunde</span>
+              </div>
+              <p className="text-sm font-medium">{pair.customer.text}</p>
+              <div className="absolute bottom-0 -left-2 w-4 h-4 bg-current transform rotate-45" />
+            </motion.div>
           </motion.div>
         ))}
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Central AI Response Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-slate-900 mb-8 leading-none">
-              Vom Chaos zur
-              <br />
+            <h1 className="text-5xl md:text-7xl text-balance lg:text-8xl font-light text-white mb-8 leading-none">
+              Ihre Anrufe <br />
               <span className="bg-gradient-to-r from-blue-500 from-20% via-violet-300 to-green-300 inline-block text-transparent bg-clip-text">
-                perfekten Ordnung
+                smart beantwortet
               </span>
             </h1>
           </motion.div>
@@ -251,12 +218,55 @@ const PlayfulHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto"
+            className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Placetel AI verwandelt das tägliche Telefon-Chaos in Ihrem
-            Unternehmen in eine perfekt organisierte, automatisierte
-            Kommunikation.
+            Placetel AI versteht jede Kundenanfrage und antwortet sofort –
+            während Ihr Team sich auf das Wesentliche konzentrieren kann.
           </motion.p>
+
+          {/* Central AI Response Panel */}
+          {currentPhase >= 1 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-12 max-w-2xl mx-auto bg-slate-800/60 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 shadow-xl"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center mr-3">
+                  <Bot className="w-5 h-5 text-white" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-medium text-white">
+                    Placetel AI
+                  </h3>
+                  <p className="text-sm text-slate-400">
+                    Intelligent. Schnell. Zuverlässig.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-3 text-left">
+                {activeResponses.map((index) => (
+                  <motion.div
+                    key={`ai-response-${index}`}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      //   type: "spring",
+                      stiffness: 100,
+                      damping: 15,
+                    }}
+                    className="bg-green-500/10 border border-green-500/20 rounded-lg p-3"
+                  >
+                    <p className="text-sm text-white">
+                      {messagePairs[index].ai.text}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -266,35 +276,22 @@ const PlayfulHero = () => {
           >
             <Button
               size="lg"
-              className="bg-slate-900 hover:bg-slate-800 text-white shadow-xl"
+              className="bg-white text-slate-900 hover:bg-slate-100 shadow-xl"
             >
-              Chaos beenden
+              Jetzt ausprobieren
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-slate-300 text-slate-700 hover:bg-slate-50 bg-transparent"
+              className="border-slate-600 text-white hover:bg-slate-800 bg-transparent"
+              //   onClick={resetAnimation}
             >
-              Animation wiederholen
+              Demo ansehen
             </Button>
           </motion.div>
-
-          {/* Reset Button */}
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2 }}
-            onClick={resetAnimation}
-            className="text-sm text-slate-500 hover:text-slate-700 transition-colors underline"
-          >
-            Animation erneut abspielen
-          </motion.button>
         </div>
       </div>
-
-      {/* Bottom gradient overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent pointer-events-none" />
     </section>
   );
 };

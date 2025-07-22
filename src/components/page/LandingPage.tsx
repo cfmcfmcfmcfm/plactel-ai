@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Clock, Users, Zap } from "lucide-react";
 import ProductComparison from "../molecules/ProductComparison";
 import RoiCalculator from "../molecules/RoiCalculator";
-// import PlayfulHero from "../molecules/PlayfulHero";
+import PlayfulHero from "../molecules/PlayfulHero";
 // import VercelInspiredSection from "../molecules/VercelInspiredSection";
 
 export default function LandingPage() {
@@ -20,7 +20,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen ">
-      {/* <PlayfulHero /> */}
+      <PlayfulHero />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32 gradient-bg">

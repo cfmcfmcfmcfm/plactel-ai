@@ -8,8 +8,8 @@ import "./globals.css";
 import DynamicBackground from "@/components/atoms/DynamicBackground";
 
 const whyte = localFont({
-  // src: "../fonts/ABCWhyteVariable-Trial.woff2",
-  src: "../fonts/ABCWhyteSemi-Mono-Light-Trial.woff2",
+  src: "../fonts/ABCWhyteVariable-Trial.woff2",
+  // src: "../fonts/ABCWhyteSemi-Mono-Light-Trial.woff2",
   variable: "--font-whyte",
 });
 

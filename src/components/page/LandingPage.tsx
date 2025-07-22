@@ -45,7 +45,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-light mb-8 leading-none text-slate-300">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 leading-none text-slate-300">
                 Die <span className="text-white">#1 AI-Lösung</span>
                 <br />
                 für{" "}
@@ -93,7 +93,8 @@ export default function LandingPage() {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 ">
+
+      {/* <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -115,7 +116,7 @@ export default function LandingPage() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-0">
-            {/* AI SmartDesk Card */}
+            
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -170,7 +171,7 @@ export default function LandingPage() {
               </Card>
             </motion.div>
 
-            {/* AI Pro Card */}
+            
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -224,7 +225,7 @@ export default function LandingPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits Section */}
       <section className="py-20">
@@ -299,9 +300,9 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <RoiCalculator />
-
       <ProductComparison />
+
+      <RoiCalculator />
 
       {/* <VercelInspiredSection /> */}
 

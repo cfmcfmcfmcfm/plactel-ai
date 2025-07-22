@@ -60,7 +60,7 @@ const ProductComparison = () => {
                       <Phone className="w-6 h-6" />
                     </div>
                     <h3 className="text-2xl  mb-3">Placetel AI SmartDesk</h3>
-                    <p className="text-sm leading-relaxed mb-6">
+                    <p className="text-sm leading-relaxed mb-6 text-balance max-w-sm">
                       Der einfachste Voice Agent auf dem Markt - ideal für
                       wiederkehrende Anliegen
                     </p>
@@ -86,12 +86,18 @@ const ProductComparison = () => {
                   </div>
                 </div>
 
-                <Button
-                  size="lg"
-                  className="mt-8 bg-blue-600 hover:bg-blue-700 text-white"
-                >
-                  SmartDesk wählen
-                </Button>
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <Button
+                    size="lg"
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    SmartDesk testen
+                  </Button>
+
+                  <Button size="lg" variant="outline">
+                    Mehr erfahren
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -104,7 +110,7 @@ const ProductComparison = () => {
                       <Zap className="w-6 h-6" />
                     </div>
                     <h3 className="text-2xl mb-3">Placetel AI Pro</h3>
-                    <p className="text-sm leading-relaxed mb-6">
+                    <p className="text-sm leading-relaxed mb-6 text-balance max-w-sm">
                       Die flexible Enterprise-Lösung mit 100%
                       individualisierbaren Voice Agents
                     </p>
@@ -129,12 +135,19 @@ const ProductComparison = () => {
                     </div>
                   </div>
                 </div>
-                <Button
-                  size="lg"
-                  className="mt-8 bg-purple-600 hover:bg-purple-700 text-white"
-                >
-                  AI Pro wählen
-                </Button>
+
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <Button
+                    size="lg"
+                    className="bg-purple-600 hover:bg-purple-700 text-white"
+                  >
+                    AI Pro testen
+                  </Button>
+
+                  <Button size="lg" variant="outline">
+                    Mehr erfahren
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>

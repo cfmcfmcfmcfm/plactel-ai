@@ -8,7 +8,8 @@ import "./globals.css";
 import DynamicBackground from "@/components/atoms/DynamicBackground";
 
 const whyte = localFont({
-  src: "../fonts/ABCWhyteVariable-Trial.woff2",
+  // src: "../fonts/ABCWhyteVariable-Trial.woff2",
+  src: "../fonts/ABCWhyteSemi-Mono-Light-Trial.woff2",
   variable: "--font-whyte",
 });
 
@@ -39,12 +40,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${whyte.variable} bg-slate-950 text-gray-100 font-sans antialiased relative`}
+        className={`${whyte.variable} bg-black text-gray-100 font-sans antialiased relative`}
       >
         <Nav />
         <main>{children}</main>
         <Footer />
-        {/* <BgGrid /> */}
+
         <DynamicBackground />
       </body>
     </html>

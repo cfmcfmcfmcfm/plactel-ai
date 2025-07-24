@@ -131,7 +131,7 @@ const AiSmartDeskPage = () => {
             </p>
           </motion.div>
 
-          <div className="space-y-12 relative">
+          <div className="-space-y-px relative">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -290,12 +290,13 @@ const AiSmartDeskPage = () => {
       {/* Setup Section */}
       <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="pr-12"
             >
               <h2 className="text-4xl md:text-5xl  text-white mb-6">
                 Einrichtung direkt im

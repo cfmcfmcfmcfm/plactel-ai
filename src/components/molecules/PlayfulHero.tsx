@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Bot, Check, Phone } from "lucide-react";
+import { ArrowRight, Bot, Check, Loader2, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import SpeachBubbles from "../atoms/SpeachBubbles";
 
@@ -64,7 +64,7 @@ const PlayfulHero = () => {
     {
       customer: {
         text: "Ich warte schon 10 Minuten...",
-        position: { top: "30%", right: "12%" },
+        position: { top: "30%", right: "2%" },
       },
       ai: {
         text: "Entschuldigung, ich helfe sofort",
@@ -82,7 +82,7 @@ const PlayfulHero = () => {
     {
       customer: {
         text: "Ich rufe wegen der Wartung an",
-        position: { top: "50%", right: "3%" },
+        position: { top: "50%", right: "10%" },
       },
       ai: {
         text: "Wartungstermin eingetragen",
@@ -117,7 +117,7 @@ const PlayfulHero = () => {
     setTimeout(() => {
       setShowChaos(false);
       setCurrentPhase(2);
-    }, 8000);
+    }, 4000);
 
     return () => {
       clearTimeout(timer);
@@ -146,21 +146,23 @@ const PlayfulHero = () => {
   if (!isClient) return null;
 
   return (
-    <section className="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen">
+    <section className="relative overflow-hidden py-20 lg:py-32 min-h-screen">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Customer Inquiries */}
         {messagePairs.map((pair, index) => (
           <motion.div
             key={`customer-${index}`}
-            initial={{ opacity: 0, scale: 0, rotate: -10 }}
+            initial={{ opacity: 0, scale: 0, rotate: 0 }}
             animate={{
               opacity: currentPhase === 2 ? 0.3 : 1,
               scale: currentPhase === 0 ? [0.8, 1.2, 0.9, 1.1, 1] : 1, // Settle to normal scale
-              rotate:
-                currentPhase === 0
-                  ? [Math.random() * 40 - 20, Math.random() * 60 - 30, 0]
-                  : 0, // Settle to 0 rotation
+              // rotate:
+              //   currentPhase === 0
+              //     ? [Math.random() * 40 - 20, Math.random() * 60 - 30, 0]
+              //     : 0,
+
+              // Settle to 0 rotation
               // Subtle mouse-responsive movement after settling
               x: currentPhase >= 1 ? mousePosition.x * (0.3 + index * 0.1) : 0,
               y: currentPhase >= 1 ? mousePosition.y * (0.3 + index * 0.1) : 0,
@@ -192,7 +194,7 @@ const PlayfulHero = () => {
               }}
               //   className=" rounded-bl-sm   relative transform hover:scale-105 transition-transform cursor-pointer"
             >
-              <SpeachBubbles className="bg-slate-700 text-slate-100 px-4 py-3 rounded-full shadow-lg max-w-xs">
+              <SpeachBubbles className="bg-slate-700 text-slate-100 px-4 py-3 rounded-2xl shadow-lg max-w-xs backdrop-blur-sm">
                 <div className="flex items-center space-x-2 mb-1">
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                     <Phone className="w-3 h-3" />
@@ -236,74 +238,65 @@ const PlayfulHero = () => {
           </motion.p>
 
           {/* Fixed AI Response Container */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            className="mb-12 max-w-2xl mx-auto bg-slate-800/60 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 shadow-xl min-h-[140px] flex flex-col"
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center mr-3">
-                <Bot className="w-5 h-5 text-white" />
+          <div className="grid grid-cols-12 mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="col-span-6 col-start-4 bg-slate-800/60 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 shadow-xl min-h-[140px] flex flex-col"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center mr-3">
+                  <Bot className="w-5 h-5 text-white" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-medium text-white">
+                    Placetel AI
+                  </h3>
+                  <p className="text-sm text-slate-400">
+                    Intelligent. Schnell. Zuverlässig.
+                  </p>
+                </div>
               </div>
-              <div className="text-left">
-                <h3 className="text-lg font-medium text-white">Placetel AI</h3>
-                <p className="text-sm text-slate-400">
-                  Intelligent. Schnell. Zuverlässig.
-                </p>
-              </div>
-            </div>
 
-            {/* Response Content Area */}
-            <div className="flex-1 flex items-center justify-center">
-              {!showResponses ? (
-                // Loading State
-                <AnimatePresence mode="wait">
+              {/* Response Content Area */}
+              <div className="flex-1 flex items-center justify-center">
+                {!showResponses ? (
+                  // Loading State
                   <motion.div
-                    key={currentResponseIndex}
-                    initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                    transition={{
-                      duration: 0.4,
-                      type: "spring",
-                      stiffness: 100,
-                      damping: 15,
-                    }}
-                    className="bg-green-500/10 border border-green-500/20 rounded-lg p-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    // className="flex items-center space-x-3 text-slate-400 p-4"
+                    className="bg-slate-500/30 border border-slate-400/20 rounded-lg p-4 w-full flex items-center justify-center"
                   >
-                    <p className="text-white text-center">
-                      {messagePairs[currentResponseIndex].ai.text}
-                      <Check className="ml-2 w-4 h-4 inline text-green-400" />
-                    </p>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <span className="ml-2">Verarbeite Anfragen...</span>
                   </motion.div>
-                </AnimatePresence>
-              ) : (
-                // Cycling Responses (Forever)
-                <div className="w-full">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={currentResponseIndex}
-                      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                      transition={{
-                        duration: 0.4,
-                        type: "spring",
-                        stiffness: 100,
-                        damping: 15,
-                      }}
-                      className="bg-green-500/10 border border-green-500/20 rounded-lg p-4"
-                    >
-                      <p className="text-white text-center">
-                        {messagePairs[currentResponseIndex].ai.text}
-                        <Check className="ml-2 w-4 h-4 inline text-green-400" />
-                      </p>
-                    </motion.div>
-                  </AnimatePresence>
+                ) : (
+                  <div className="w-full">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentResponseIndex}
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                        transition={{
+                          duration: 0.4,
+                          type: "spring",
+                          stiffness: 100,
+                          damping: 15,
+                        }}
+                        className="bg-green-500/10 border border-green-500/20 rounded-lg p-4"
+                      >
+                        <p className="text-white text-center">
+                          {messagePairs[currentResponseIndex].ai.text}
+                          <Check className="ml-2 w-4 h-4 inline text-green-400" />
+                        </p>
+                      </motion.div>
+                    </AnimatePresence>
 
-                  {/* Progress Indicator */}
-                  <div className="flex justify-center mt-4 space-x-1">
+                    {/* Progress Indicator */}
+                    {/* <div className="flex justify-center mt-4 space-x-1">
                     {messagePairs.map((_, index) => (
                       <div
                         key={index}
@@ -314,11 +307,12 @@ const PlayfulHero = () => {
                         }`}
                       />
                     ))}
+                  </div> */}
                   </div>
-                </div>
-              )}
-            </div>
-          </motion.div>
+                )}
+              </div>
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -356,7 +350,7 @@ const PlayfulHero = () => {
       </div>
 
       {/* Bottom gradient overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900/80 to-transparent pointer-events-none" />
+      {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900/80 to-transparent pointer-events-none" /> */}
     </section>
   );
 };

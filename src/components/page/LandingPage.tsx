@@ -9,21 +9,12 @@ import PlayfulHero from "../molecules/PlayfulHero";
 // import VercelInspiredSection from "../molecules/VercelInspiredSection";
 
 export default function LandingPage() {
-  const companies = [
-    "Siemens",
-    "BMW",
-    "Deutsche Bank",
-    "SAP",
-    "Volkswagen",
-    "Bosch",
-  ];
-
   return (
     <div className="min-h-screen ">
       <PlayfulHero />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32 gradient-bg">
+      {/* <section className="relative overflow-hidden py-20 lg:py-32 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
@@ -68,7 +59,6 @@ export default function LandingPage() {
               </Button>
             </motion.div>
 
-            {/* Company Logos */}
             <div className="relative overflow-hidden">
               <div className="flex animate-marquee whitespace-nowrap w-max">
                 {companies.map((company, index) => (
@@ -91,7 +81,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Products Section */}
 
@@ -200,7 +190,7 @@ export default function LandingPage() {
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3" />
-                      <span>Eigene Voicebots für individuelle Anliegen</span>
+                      <span>Eigene Voice Agents für individuelle Anliegen</span>
                     </div>
                     <div className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3" />

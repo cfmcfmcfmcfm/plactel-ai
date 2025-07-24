@@ -113,7 +113,7 @@ const RoiCalculator = () => {
         </motion.div>
 
         <motion.div
-          className="bg-slate-800/50 border-y border-slate-700 border-x-0 grid md:grid-cols-2"
+          className="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-clip shadow-sm grid md:grid-cols-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

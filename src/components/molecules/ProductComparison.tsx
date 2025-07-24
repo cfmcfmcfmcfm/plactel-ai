@@ -50,7 +50,7 @@ const ProductComparison = () => {
           className="max-w-7xl mx-auto"
         >
           {/* Comparison Cards */}
-          <div className="grid md:grid-cols-2">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* SmartDesk Card */}
             <Card className="h-full border-r">
               <CardContent className="p-8 h-full flex flex-col justify-between items-start">

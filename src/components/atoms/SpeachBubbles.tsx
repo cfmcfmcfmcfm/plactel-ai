@@ -4,7 +4,7 @@ import React from "react";
 const SpeachBubbles = ({
   children,
   className,
-}: Readonly<{ children: React.ReactNode; className?: "string" }>) => {
+}: Readonly<{ children: React.ReactNode; className?: string }>) => {
   return (
     <div className={cn("relative rounded-full p-8", className)}>
       <div>{children}</div>

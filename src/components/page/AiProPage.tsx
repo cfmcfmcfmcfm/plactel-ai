@@ -21,7 +21,7 @@ const AiProPage = () => {
   const features = [
     {
       icon: MessageSquare,
-      title: "Eigene Voicebots für Ihre Hotline",
+      title: "Eigene Voice Agents für Ihre Hotline",
       description:
         "Auf Ihre Anforderungen zugeschnittene AI-Assistenten – abgestimmt auf Ihre Unternehmensprozesse.",
     },
@@ -277,7 +277,7 @@ const AiProPage = () => {
                 Maßgeschneiderte Gesprächsverläufe – ohne Aufwand.
               </p>
               <p className="text-slate-300 mb-8 ">
-                Konfigurieren Sie Ihre Voicebots ganz nach Ihrem Bedarf und
+                Konfigurieren Sie Ihre Voice Agents ganz nach Ihrem Bedarf und
                 behalten Sie jederzeit die volle Kontrolle auf unserer
                 Plattform. Mit dem Visual Editor verketten Sie einfach
                 verschiedene Anweisungen (Prompts) hinter einer Rufnummer, um
@@ -290,19 +290,21 @@ const AiProPage = () => {
                   <Check className="w-5 h-5 text-green-400 mr-3" />
                   <span>
                     Einfache visuelle Übersicht zum Anlegen und Bearbeiten Ihrer
-                    Bots
+                    Voice Agents
                   </span>
                 </div>
                 <div className="flex items-center text-slate-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" />
                   <span>
-                    Mehrere Bots einfach parallel erstellen und miteinander
-                    vernetzen
+                    Mehrere Voice Agents einfach parallel erstellen und
+                    miteinander vernetzen
                   </span>
                 </div>
                 <div className="flex items-center text-slate-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Volle Kontrolle über das Finetuning Ihrer Bots</span>
+                  <span>
+                    Volle Kontrolle über das Finetuning Ihrer Voice Agents
+                  </span>
                 </div>
               </div>
 

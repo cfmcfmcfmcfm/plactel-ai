@@ -200,7 +200,7 @@ export default function LandingPage() {
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3" />
-                      <span>Eigene Voicebots für individuelle Anliegen</span>
+                      <span>Eigene Voice Agents für individuelle Anliegen</span>
                     </div>
                     <div className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3" />

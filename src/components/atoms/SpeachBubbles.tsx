@@ -6,8 +6,8 @@ const SpeachBubbles = ({
   className,
 }: Readonly<{ children: React.ReactNode; className?: "string" }>) => {
   return (
-    <div className={cn("relative bg-current rounded-full p-8", className)}>
-      <div className="text-black">{children}</div>
+    <div className={cn("relative rounded-full p-8", className)}>
+      <div>{children}</div>
 
       <svg
         aria-hidden="true"
@@ -21,7 +21,7 @@ const SpeachBubbles = ({
         <path
           className="transition-colors"
           d="M44 0H0V0C0 24.8528 20.1472 45 45 45H53V45C47.1396 36.535 44 26.4842 44 16.1886V0Z"
-          fill="currentColor"
+          fill="bg-slate-700"
         ></path>
       </svg>
     </div>

@@ -75,7 +75,7 @@ const AiSmartDeskPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="font-light text-5xl md:text-7xl lg:text-8xl  text-white mb-8 leading-none">
+              <h1 className="font-light text-5xl md:text-6xl lg:text-7xl tracking-tight text-white mb-8 leading-none">
                 Intelligente Telefonie
                 <br />
                 <span className="text-slate-300">auf Knopfdruck</span>
@@ -86,7 +86,7 @@ const AiSmartDeskPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl text-slate-400 mb-12 max-w-4xl mx-auto "
             >
               Täglich wiederkehrende Anfragen blockieren Ressourcen – der
               Placetel AI SmartDesk übernimmt, entlastet und verbindet
@@ -160,7 +160,7 @@ const AiSmartDeskPage = () => {
                           </div>
                         </div>
 
-                        <p className="text-slate-300 mb-6 leading-relaxed">
+                        <p className="text-slate-300 mb-6 ">
                           {useCase.description}
                         </p>
 
@@ -227,7 +227,7 @@ const AiSmartDeskPage = () => {
                 <Clock className="w-8 h-8 text-blue-400" />
               </div>
               <h3 className="text-lg  text-white mb-3">24/7 Erreichbarkeit</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Immer für Kunden da – selbst abends, am Wochenende oder an
                 Feiertagen
               </p>
@@ -244,7 +244,7 @@ const AiSmartDeskPage = () => {
                 <Check className="w-8 h-8 text-green-400" />
               </div>
               <h3 className="text-lg  text-white mb-3">Plug & Play</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Direkt im Placetel Portal aktivieren – ganz ohne technische
                 Hürden
               </p>
@@ -261,7 +261,7 @@ const AiSmartDeskPage = () => {
                 <Phone className="w-8 h-8 text-purple-400" />
               </div>
               <h3 className="text-lg  text-white mb-3">Perfekt integriert</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Nahtlos in die Placetel Telefonanlage integriert – alles in
                 einem System
               </p>
@@ -278,7 +278,7 @@ const AiSmartDeskPage = () => {
                 <Users className="w-8 h-8 text-orange-400" />
               </div>
               <h3 className="text-lg  text-white mb-3">80% Automatisierung</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Übernimmt bis zu 80% der Anrufe vollautomatisch und rund um die
                 Uhr
               </p>
@@ -302,10 +302,10 @@ const AiSmartDeskPage = () => {
                 <br />
                 <span className="  text-slate-300">Kundenportal</span>
               </h2>
-              <p className="text-xl text-slate-400 mb-6 leading-relaxed">
+              <p className="text-xl text-slate-400 mb-6 ">
                 Schnell eingerichtet. Sofort einsatzbereit.
               </p>
-              <p className="text-slate-300 mb-8 leading-relaxed">
+              <p className="text-slate-300 mb-8 ">
                 Einfach zusammenklicken statt aufwendig konfigurieren: Der AI
                 SmartDesk wird Schritt für Schritt im Placetel Portal erstellt
                 und ist sofort startklar – ganz ohne technische Hürden.
@@ -361,7 +361,7 @@ const AiSmartDeskPage = () => {
               Bereit für{" "}
               <span className="  text-slate-300">smarte Kommunikation?</span>
             </h2>
-            <p className="text-xl text-slate-400 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-400 mb-8 ">
               Testen Sie jetzt den SmartDesk und verlieren Sie kein Gespräch –
               ganz ohne zusätzlichen Aufwand im Team.
             </p>

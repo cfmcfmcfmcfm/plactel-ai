@@ -113,13 +113,13 @@ const RoiCalculator = () => {
         </motion.div>
 
         <motion.div
-          className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 md:p-12 grid md:grid-cols-2 gap-12"
+          className="bg-slate-800/50 border-y border-slate-700 border-x-0 grid md:grid-cols-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div>
+          <div className="p-4 lg:p-8">
             <h3 className="text-2xl  text-white mb-8">Ihre Parameter</h3>
             <div className="space-y-8">
               <div className="space-y-3">
@@ -179,7 +179,7 @@ const RoiCalculator = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-slate-800 border border-slate-700 rounded-xl p-8 space-y-6"
+            className="bg-slate-800/50 p-4 lg:p-8 space-y-6"
           >
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">

@@ -5,11 +5,11 @@ import Nav from "@/components/organisms/Nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import InteractiveBackground from "@/components/atoms/BgGrid";
-// import BgGrid from "@/components/atoms/BgGrid";
+import DynamicBackground from "@/components/atoms/DynamicBackground";
 
 const whyte = localFont({
   src: "../fonts/ABCWhyteVariable-Trial.woff2",
+  // src: "../fonts/ABCWhyteSemi-Mono-Light-Trial.woff2",
   variable: "--font-whyte",
 });
 
@@ -40,13 +40,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${whyte.variable} bg-slate-950 text-gray-100 font-sans antialiased relative`}
+        className={`${whyte.variable} bg-black text-gray-100 font-sans antialiased relative selection:bg-blue-500 selection:text-white`}
       >
         <Nav />
         <main>{children}</main>
         <Footer />
-        {/* <BgGrid /> */}
-        <InteractiveBackground />
+
+        <DynamicBackground />
       </body>
     </html>
   );

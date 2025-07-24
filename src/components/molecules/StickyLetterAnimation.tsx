@@ -21,7 +21,7 @@ const StickyLetterAnimation = () => {
   return (
     <div ref={containerRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="text-2xl md:text-3xl max-w-4xl px-6 leading-relaxed text-center">
+        <div className="text-2xl md:text-3xl max-w-4xl px-6  text-center">
           {letters.map(({ char, index }) => (
             <AnimatedLetter
               key={index}

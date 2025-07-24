@@ -71,7 +71,7 @@ const AiProPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="font-light text-5xl md:text-7xl lg:text-8xl  text-white mb-8 leading-none">
+              <h1 className="font-light text-5xl md:text-6xl lg:text-7xl  text-white mb-8 leading-none">
                 Flexibler AI-Agent für
                 <br />
                 <span className="text-slate-300">komplexe Anforderungen</span>
@@ -82,7 +82,7 @@ const AiProPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl text-slate-400 mb-12 max-w-4xl mx-auto "
             >
               Hohe Gesprächsvolumen, individuelle Anliegen, heterogene Systeme?
               AI Pro erkennt Inhalte live, unterstützt im Gespräch, dokumentiert
@@ -146,9 +146,7 @@ const AiProPage = () => {
                       {feature.title}
                     </h3>
 
-                    <p className="text-slate-400 leading-relaxed">
-                      {feature.description}
-                    </p>
+                    <p className="text-slate-400 ">{feature.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -172,7 +170,7 @@ const AiProPage = () => {
                   Use Case: Automatisierte Koordination von
                   Rauchwarnmelder-Wartungen
                 </h3>
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-slate-300 ">
                   Bei der Minol GmbH & Co. KG kommt es regelmäßig zu Stoßzeiten,
                   wenn viele Kunden gleichzeitig wegen der Wartung ihrer
                   Rauchwarnmelder anrufen. Das führt zu Überlastung im
@@ -186,7 +184,7 @@ const AiProPage = () => {
                   <Check className="w-5 h-5 text-green-400 mr-2" />
                   Lösung mit Placetel AI Pro
                 </h4>
-                <p className="text-slate-300 mb-4 leading-relaxed">
+                <p className="text-slate-300 mb-4 ">
                   Zufriedenere Kunden, spürbare Entlastung im Team und mehr Zeit
                   fürs Wesentliche
                 </p>
@@ -275,10 +273,10 @@ const AiProPage = () => {
               <h2 className="text-4xl md:text-5xl  text-white mb-6">
                 <span className="  text-slate-300">Visueller</span> Editor
               </h2>
-              <p className="text-xl text-slate-400 mb-6 leading-relaxed">
+              <p className="text-xl text-slate-400 mb-6 ">
                 Maßgeschneiderte Gesprächsverläufe – ohne Aufwand.
               </p>
-              <p className="text-slate-300 mb-8 leading-relaxed">
+              <p className="text-slate-300 mb-8 ">
                 Konfigurieren Sie Ihre Voicebots ganz nach Ihrem Bedarf und
                 behalten Sie jederzeit die volle Kontrolle auf unserer
                 Plattform. Mit dem Visual Editor verketten Sie einfach
@@ -430,7 +428,7 @@ const AiProPage = () => {
               <h3 className="text-lg  text-white mb-3">
                 Vollständig anpassbar
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Maßgeschneiderte Workflows für Ihre spezifischen
                 Geschäftsprozesse
               </p>
@@ -447,7 +445,7 @@ const AiProPage = () => {
                 <Database className="w-8 h-8 text-blue-400" />
               </div>
               <h3 className="text-lg  text-white mb-3">System-Integration</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Nahtlose Anbindung an CRM, Datenbanken und bestehende Tools
               </p>
             </motion.div>
@@ -463,7 +461,7 @@ const AiProPage = () => {
                 <Users className="w-8 h-8 text-green-400" />
               </div>
               <h3 className="text-lg  text-white mb-3">Skalierbar</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Wächst mit Ihrem Unternehmen und passt sich an veränderte
                 Anforderungen an
               </p>
@@ -480,7 +478,7 @@ const AiProPage = () => {
                 <Clock className="w-8 h-8 text-orange-400" />
               </div>
               <h3 className="text-lg  text-white mb-3">Sofort einsatzbereit</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm ">
                 Schnelle Implementierung ohne lange Einrichtungszeiten
               </p>
             </motion.div>
@@ -502,7 +500,7 @@ const AiProPage = () => {
               <br />
               <span className="  text-slate-300">AI-Automatisierung?</span>
             </h2>
-            <p className="text-xl text-slate-400 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-400 mb-8 ">
               Entdecken Sie die Möglichkeiten von AI Pro und automatisieren Sie
               auch die komplexesten Kommunikationsprozesse in Ihrem Unternehmen.
             </p>

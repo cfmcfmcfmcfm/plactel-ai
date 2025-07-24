@@ -1,11 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Clock, Phone, Users, Zap } from "lucide-react";
-import Link from "next/link";
+import { Clock, Users, Zap } from "lucide-react";
+import ProductComparison from "../molecules/ProductComparison";
 import RoiCalculator from "../molecules/RoiCalculator";
+import PlayfulHero from "../molecules/PlayfulHero";
+// import VercelInspiredSection from "../molecules/VercelInspiredSection";
 
 export default function LandingPage() {
   const companies = [
@@ -19,31 +20,22 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen ">
+      <PlayfulHero />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-8">
-                <Bot className="w-8 h-8 text-slate-900" />
-              </div>
-            </motion.div> */}
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex flex-wrap text-center justify-center mb-8 border-y border-slate-700 text-slate-400 text-sm uppercase tracking-wider"
+              className="flex flex-col lg:flex-row text-center justify-center mb-8 border-y border-slate-700 text-slate-400 text-sm uppercase tracking-wider"
             >
-              <span className="min-w-72 border-r py-1 border-slate-700">
+              <span className="min-w-72 lg:border-r py-1 border-slate-700">
                 #1 in Kundenzufriedenheit
               </span>
-              <span className="min-w-72 border-r py-1 border-slate-700">
+              <span className="min-w-72 lg:border-r py-1 border-slate-700">
                 #1 in Automatisierung
               </span>
               <span className="min-w-72 py-1">#1 Bewertung bei G2</span>
@@ -54,7 +46,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-none text-slate-300">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 leading-none text-slate-300">
                 Die <span className="text-white">#1 AI-Lösung</span>
                 <br />
                 für{" "}
@@ -99,14 +91,11 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
       </section>
 
       {/* Products Section */}
-      <section className="py-20 ">
+
+      {/* <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -127,15 +116,15 @@ export default function LandingPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* AI SmartDesk Card */}
+          <div className="grid md:grid-cols-2 gap-0">
+            
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full border-slate-700 bg-slate-900/50 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
+              <Card className="h-full rounded-none border-y border-l-0 border-r border-slate-700 bg-slate-900/30 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
@@ -147,7 +136,7 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <p className="text-slate-300 mb-6 text-lg leading-relaxed">
+                  <p className="text-slate-300 mb-6 text-lg ">
                     24/7 Erreichbarkeit durch smarte Anrufannahme, Beantwortung
                     häufiger Fragen und gezielte Weiterleitung. Startklar in
                     wenigen Minuten.
@@ -171,7 +160,10 @@ export default function LandingPage() {
                   </div>
 
                   <Link href="/smartdesk">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 group-hover:glow-effect transition-all duration-300">
+                    <Button
+                      size="lg"
+                      className="bg-blue-600 text-white hover:bg-blue-700 group-hover:glow-effect transition-all duration-300"
+                    >
                       Mehr erfahren
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -180,14 +172,14 @@ export default function LandingPage() {
               </Card>
             </motion.div>
 
-            {/* AI Pro Card */}
+            
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full border-slate-700 bg-slate-900/50 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
+              <Card className="h-full rounded-none border-y border-x-0 border-slate-700 bg-slate-900/30 hover:bg-slate-800/70 transition-all duration-300 hover:border-slate-600 group">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mr-4">
@@ -199,7 +191,7 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <p className="text-slate-300 mb-6 text-lg leading-relaxed">
+                  <p className="text-slate-300 mb-6 text-lg ">
                     Flexibler AI-Agent für komplexe Anforderungen mit nahtloser
                     Integration in bestehende Systeme und maßgeschneiderten
                     Workflows.
@@ -221,7 +213,10 @@ export default function LandingPage() {
                   </div>
 
                   <Link href="/pro">
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700 group-hover:glow-effect transition-all duration-300">
+                    <Button
+                      size="lg"
+                      className="bg-purple-600 hover:bg-purple-700 text-white group-hover:glow-effect transition-all duration-300"
+                    >
                       Mehr erfahren
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -231,7 +226,7 @@ export default function LandingPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits Section */}
       <section className="py-20">
@@ -263,7 +258,7 @@ export default function LandingPage() {
                 <Clock className="w-8 h-8 text-blue-400" />
               </div>
               <h3 className="text-xl  text-white mb-4">24/7 Erreichbarkeit</h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 ">
                 Ihre Kunden erreichen Sie immer – auch außerhalb der
                 Öffnungszeiten, am Wochenende und an Feiertagen.
               </p>
@@ -280,7 +275,7 @@ export default function LandingPage() {
                 <Users className="w-8 h-8 text-green-400" />
               </div>
               <h3 className="text-xl  text-white mb-4">Team entlasten</h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 ">
                 Bis zu 80% der Anrufe werden automatisch bearbeitet. Mehr Zeit
                 für die Gespräche, die wirklich zählen.
               </p>
@@ -297,7 +292,7 @@ export default function LandingPage() {
                 <Zap className="w-8 h-8 text-purple-400" />
               </div>
               <h3 className="text-xl  text-white mb-4">Sofort startklar</h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 ">
                 Keine komplizierte Installation. Aktivierung direkt im Placetel
                 Portal – in wenigen Minuten einsatzbereit.
               </p>
@@ -306,7 +301,11 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <ProductComparison />
+
       <RoiCalculator />
+
+      {/* <VercelInspiredSection /> */}
 
       {/* CTA Section */}
       <section className="py-20 ">
@@ -320,7 +319,7 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-5xl  text-white mb-6">
               Bereit für <span className=" ">smarte Kommunikation?</span>
             </h2>
-            <p className="text-xl text-slate-400 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-400 mb-8 ">
               Testen Sie jetzt Placetel AI und verlieren Sie kein Gespräch –
               ganz ohne zusätzlichen Aufwand im Team.
             </p>

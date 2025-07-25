@@ -108,7 +108,7 @@ const RoiCalculator = () => {
                     <h2 className="mb-6 text-4xl text-white md:text-5xl">
                         ROI <span className="text-slate-300">Rechner</span>
                     </h2>
-                    <p className="text-xldark:text-slate-400 mx-auto max-w-3xl text-slate-700">
+                    <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
                         Berechnen Sie Ihren Return on Investment mit Placetel AI
                     </p>
                 </motion.div>
@@ -139,7 +139,7 @@ const RoiCalculator = () => {
                                     }
                                     className="w-full"
                                 />
-                                <span className="text-smdark:text-slate-400 block text-slate-700">
+                                <span className="block text-sm text-slate-700 dark:text-slate-400">
                                     {inputs.anrufe} Anrufe/Tag
                                 </span>
                             </div>

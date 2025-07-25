@@ -44,9 +44,11 @@ export default function LandingPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1 }}
                         >
-                            <h1 className="mb-8 text-4xl leading-none font-light tracking-tight text-slate-300 md:text-7xl lg:text-8xl">
+                            <h1 className="mb-8 text-4xl leading-none font-light tracking-tight text-slate-950 md:text-7xl lg:text-8xl dark:text-slate-300">
                                 Die{' '}
-                                <span className="text-white">#1 AI-Lösung</span>
+                                <span className="text-slate-950 dark:text-slate-50">
+                                    #1 AI-Lösung
+                                </span>
                                 <br />
                                 für{' '}
                                 <span className="inline-block bg-gradient-to-r from-blue-500 from-20% via-violet-300 to-green-300 bg-clip-text text-transparent">
@@ -102,7 +104,7 @@ export default function LandingPage() {
                         viewport={{ once: true }}
                         className="mb-16 text-center"
                     >
-                        <h2 className="mb-6 text-4xl text-white md:text-5xl">
+                        <h2 className="mb-6 text-4xl md:text-5xl">
                             Warum Placetel AI?
                         </h2>
                         <p className="text-xldark:text-slate-400 text-slate-700">
@@ -118,13 +120,14 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             className="group text-center"
                         >
-                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white transition-colors duration-300 group-hover:bg-slate-600 dark:bg-slate-700">
+                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white transition-colors duration-300 group-hover:bg-slate-100 dark:bg-slate-700 dark:group-hover:bg-slate-600">
                                 <Clock className="h-8 w-8 text-blue-400" />
                             </div>
 
                             <h3 className="mb-4 text-xl">
                                 24/7 Erreichbarkeit
                             </h3>
+
                             <p className="text-slate-600 dark:text-slate-400">
                                 Ihre Kunden erreichen Sie immer – auch außerhalb
                                 der Öffnungszeiten, am Wochenende und an
@@ -139,13 +142,13 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             className="group text-center"
                         >
-                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-700 transition-colors duration-300 group-hover:bg-slate-600">
+                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white transition-colors duration-300 group-hover:bg-slate-100 dark:bg-slate-700 dark:group-hover:bg-slate-600">
                                 <Users className="h-8 w-8 text-green-400" />
                             </div>
-                            <h3 className="mb-4 text-xl text-white">
-                                Team entlasten
-                            </h3>
-                            <p className="text-slate-400">
+
+                            <h3 className="mb-4 text-xl">Team entlasten</h3>
+
+                            <p className="text-slate-600 dark:text-slate-400">
                                 Bis zu 80% der Anrufe werden automatisch
                                 bearbeitet. Mehr Zeit für die Gespräche, die
                                 wirklich zählen.
@@ -159,13 +162,13 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             className="group text-center"
                         >
-                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-700 transition-colors duration-300 group-hover:bg-slate-600">
+                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white transition-colors duration-300 group-hover:bg-slate-100 dark:bg-slate-700 dark:group-hover:bg-slate-600">
                                 <Zap className="h-8 w-8 text-purple-400" />
                             </div>
-                            <h3 className="mb-4 text-xl text-white">
-                                Sofort startklar
-                            </h3>
-                            <p className="text-slate-400">
+
+                            <h3 className="mb-4 text-xl">Sofort startklar</h3>
+
+                            <p className="text-slate-600 dark:text-slate-400">
                                 Keine komplizierte Installation. Aktivierung
                                 direkt im Placetel Portal – in wenigen Minuten
                                 einsatzbereit.
@@ -190,11 +193,10 @@ export default function LandingPage() {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="mb-6 text-4xl text-white md:text-5xl">
-                            Bereit für{' '}
-                            <span className=" ">smarte Kommunikation?</span>
+                        <h2 className="mb-6 text-4xl md:text-5xl">
+                            Bereit für smarte Kommunikation?
                         </h2>
-                        <p className="text-xldark:text-slate-400 mb-8 text-slate-700">
+                        <p className="mb-8 text-xl text-slate-700 dark:text-slate-400">
                             Testen Sie jetzt Placetel AI und verlieren Sie kein
                             Gespräch – ganz ohne zusätzlichen Aufwand im Team.
                         </p>

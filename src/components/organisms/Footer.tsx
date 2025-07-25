@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Logo from '@/components/atoms/Logo';
+// import Logo from '@/components/atoms/Logo';
 import { ModeToggle } from '@/components/atoms/ModeToggle';
 
 const Footer = () => {
@@ -8,7 +8,8 @@ const Footer = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid gap-8 md:grid-cols-4">
                     <div className="flex flex-col gap-8">
-                        <Logo />
+                        {/* <Logo /> */}
+                        <ModeToggle />
 
                         <p className="text-slate-600 dark:text-slate-400">
                             Die Zukunft der Geschäftstelefonie ist AI.
@@ -80,10 +81,10 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-
+                    {/* 
                     <div className="col-span-full">
                         <ModeToggle />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>

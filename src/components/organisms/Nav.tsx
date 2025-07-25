@@ -10,7 +10,7 @@ const Nav = () => {
     const pathname = usePathname();
 
     return (
-        <nav className="/80 sticky top-0 z-50 border-b border-slate-800 backdrop-blur-sm">
+        <nav className="sticky top-0 z-50 border-b border-slate-200 backdrop-blur-sm dark:border-slate-800">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <Logo />
@@ -19,10 +19,10 @@ const Nav = () => {
                         <Link
                             href="/ai-smartdesk"
                             className={cn(
-                                'transition-colors hover:text-purple-300',
+                                'transition-colors hover:text-purple-600 dark:hover:text-purple-300',
                                 pathname === '/ai-smartdesk'
-                                    ? 'text-purple-500'
-                                    : 'text-slate-300'
+                                    ? 'text-purple-700 dark:text-purple-500'
+                                    : 'text-slate-700 dark:text-slate-300'
                             )}
                         >
                             AI SmartDesk
@@ -31,10 +31,10 @@ const Nav = () => {
                         <Link
                             href="/ai-pro"
                             className={cn(
-                                'transition-colors hover:text-purple-300',
+                                'transition-colors hover:text-purple-600 dark:hover:text-purple-300',
                                 pathname === '/ai-pro'
-                                    ? 'text-purple-500'
-                                    : 'text-slate-300'
+                                    ? 'text-purple-700 dark:text-purple-500'
+                                    : 'text-slate-700 dark:text-slate-300'
                             )}
                         >
                             AI Pro

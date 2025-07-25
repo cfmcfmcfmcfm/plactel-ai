@@ -1,9 +1,9 @@
 'use client';
 
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 const Logo = () => {
     const { theme } = useTheme();
@@ -13,7 +13,17 @@ const Logo = () => {
         setMounted(true);
     }, []);
 
-    if (!mounted) return null; // Or render a placeholder image
+    if (!mounted)
+        return (
+            <Link href="/" className="w-40 shrink-0 grow-0">
+                <Image
+                    src={'/assets/plt-gamma-logo-weiß.png'}
+                    width={1700}
+                    height={390}
+                    alt="Placetel Logo"
+                />
+            </Link>
+        );
 
     const logoSrc =
         theme === 'dark'

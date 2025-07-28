@@ -4,21 +4,21 @@ import { ModeToggle } from '@/components/atoms/ModeToggle';
 
 const Footer = () => {
     return (
-        <footer className="border-t py-12 backdrop-blur-sm dark:border-slate-800">
+        <footer className="border-t py-12 backdrop-blur-sm dark:border-slate-700">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid gap-8 md:grid-cols-4">
                     <div className="flex flex-col gap-8">
                         {/* <Logo /> */}
                         <ModeToggle />
 
-                        <p className="text-slate-600 dark:text-slate-400">
+                        <p className="text-slate-700 dark:text-slate-400">
                             Die Zukunft der Geschäftstelefonie ist AI.
                         </p>
                     </div>
 
                     <div>
                         <h4 className="mb-4 text-xs uppercase">Produkte</h4>
-                        <ul className="space-y-2 text-slate-600 dark:text-slate-400">
+                        <ul className="space-y-2 text-slate-700 dark:text-slate-400">
                             <li>
                                 <Link
                                     href="/smartdesk"
@@ -40,7 +40,7 @@ const Footer = () => {
 
                     <div>
                         <h4 className="mb-4 text-xs uppercase">Unternehmen</h4>
-                        <ul className="space-y-2 text-slate-600 dark:text-slate-400">
+                        <ul className="space-y-2 text-slate-700 dark:text-slate-400">
                             <li>
                                 <a
                                     href="#"
@@ -62,7 +62,7 @@ const Footer = () => {
 
                     <div>
                         <h4 className="mb-4 text-xs uppercase">Legal</h4>
-                        <ul className="space-y-2 text-slate-600 dark:text-slate-400">
+                        <ul className="space-y-2 text-slate-700 dark:text-slate-400">
                             <li>
                                 <a
                                     href="#"

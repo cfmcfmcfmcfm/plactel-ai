@@ -37,7 +37,7 @@ const DynamicBackground = () => {
           return (
             <div
               key={i}
-              className="border-r first:border-l border-slate-800 relative"
+              className="border-r first:border-l border-slate-700  relative"
             />
           );
         })}

@@ -74,7 +74,7 @@ const AiProPage = () => {
                             <h1 className="mb-8 text-5xl leading-none font-light text-white md:text-6xl lg:text-7xl">
                                 Flexibler AI-Agent für
                                 <br />
-                                <span className="text-slate-300">
+                                <span className="text-slate-400">
                                     komplexe Anforderungen
                                 </span>
                             </h1>
@@ -123,7 +123,7 @@ const AiProPage = () => {
                         <h2 className="mb-6 text-4xl text-white md:text-5xl">
                             Flexibilität bis ins
                             <br />
-                            <span className="text-slate-300">
+                            <span className="text-slate-400">
                                 kleinste Detail
                             </span>
                         </h2>
@@ -144,7 +144,7 @@ const AiProPage = () => {
                                 }}
                                 viewport={{ once: true }}
                             >
-                                <Card className="group h-full border-slate-700 bg-slate-900/50 transition-all duration-300 hover:border-slate-600 hover:bg-slate-800/70">
+                                <Card className="group h-full border-slate-700 bg-slate-900/50 transition-all duration-300 hover:border-slate-700 hover:bg-slate-800/70">
                                     <CardContent className="p-8">
                                         <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500 transition-transform duration-300 group-hover:scale-110">
                                             <feature.icon className="h-6 w-6 text-white" />
@@ -180,7 +180,7 @@ const AiProPage = () => {
                                     Use Case: Automatisierte Koordination von
                                     Rauchwarnmelder-Wartungen
                                 </h3>
-                                <p className="text-slate-300">
+                                <p className="text-slate-400">
                                     Bei der Minol GmbH & Co. KG kommt es
                                     regelmäßig zu Stoßzeiten, wenn viele Kunden
                                     gleichzeitig wegen der Wartung ihrer
@@ -195,7 +195,7 @@ const AiProPage = () => {
                                     <Check className="mr-2 h-5 w-5 text-green-400" />
                                     Lösung mit Placetel AI Pro
                                 </h4>
-                                <p className="mb-4 text-slate-300">
+                                <p className="mb-4 text-slate-400">
                                     Zufriedenere Kunden, spürbare Entlastung im
                                     Team und mehr Zeit fürs Wesentliche
                                 </p>
@@ -204,7 +204,7 @@ const AiProPage = () => {
                                     {capabilities.map((capability, index) => (
                                         <div
                                             key={index}
-                                            className="flex items-center text-slate-300"
+                                            className="flex items-center text-slate-400"
                                         >
                                             <Check className="mr-3 h-4 w-4 flex-shrink-0 text-green-400" />
                                             <span className="text-sm">
@@ -247,20 +247,20 @@ const AiProPage = () => {
                                         <div className="space-y-3 text-sm">
                                             <div className="flex items-center">
                                                 <div className="mr-3 h-2 w-2 rounded-full bg-purple-500"></div>
-                                                <span className="text-slate-300">
+                                                <span className="text-slate-400">
                                                     Anruf: Wartung
                                                     Rauchwarnmelder
                                                 </span>
                                             </div>
                                             <div className="ml-3 flex items-center">
                                                 <div className="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
-                                                <span className="text-slate-300">
+                                                <span className="text-slate-400">
                                                     CRM-Abfrage: Kundendaten
                                                 </span>
                                             </div>
                                             <div className="ml-6 flex items-center">
                                                 <div className="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
-                                                <span className="text-slate-300">
+                                                <span className="text-slate-400">
                                                     Termin gebucht & E-Mail
                                                     versendet
                                                 </span>
@@ -290,7 +290,7 @@ const AiProPage = () => {
                             viewport={{ once: true }}
                         >
                             <h2 className="mb-6 text-4xl text-white md:text-5xl">
-                                <span className="text-slate-300">
+                                <span className="text-slate-400">
                                     Visueller
                                 </span>{' '}
                                 Editor
@@ -299,7 +299,7 @@ const AiProPage = () => {
                                 Maßgeschneiderte Gesprächsverläufe – ohne
                                 Aufwand.
                             </p>
-                            <p className="mb-8 text-slate-300">
+                            <p className="mb-8 text-slate-400">
                                 Konfigurieren Sie Ihre Voice Agents ganz nach
                                 Ihrem Bedarf und behalten Sie jederzeit die
                                 volle Kontrolle auf unserer Plattform. Mit dem
@@ -311,21 +311,21 @@ const AiProPage = () => {
                             </p>
 
                             <div className="mb-8 space-y-4">
-                                <div className="flex items-center text-slate-300">
+                                <div className="flex items-center text-slate-400">
                                     <Check className="mr-3 h-5 w-5 text-green-400" />
                                     <span>
                                         Einfache visuelle Übersicht zum Anlegen
                                         und Bearbeiten Ihrer Voice Agents
                                     </span>
                                 </div>
-                                <div className="flex items-center text-slate-300">
+                                <div className="flex items-center text-slate-400">
                                     <Check className="mr-3 h-5 w-5 text-green-400" />
                                     <span>
                                         Mehrere Voice Agents einfach parallel
                                         erstellen und miteinander vernetzen
                                     </span>
                                 </div>
-                                <div className="flex items-center text-slate-300">
+                                <div className="flex items-center text-slate-400">
                                     <Check className="mr-3 h-5 w-5 text-green-400" />
                                     <span>
                                         Volle Kontrolle über das Finetuning
@@ -369,8 +369,8 @@ const AiProPage = () => {
                                                     <Phone className="h-6 w-6 text-white" />
                                                 </div>
                                                 <div className="flex-1">
-                                                    <div className="rounded-lg border border-slate-600 bg-slate-700 p-3 shadow-sm">
-                                                        <span className="text-sm text-slate-200">
+                                                    <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">
+                                                        <span className="text-sm text-slate-400">
                                                             Anruf entgegennehmen
                                                         </span>
                                                     </div>
@@ -382,8 +382,8 @@ const AiProPage = () => {
                                                     <MessageSquare className="h-6 w-6 text-white" />
                                                 </div>
                                                 <div className="flex-1">
-                                                    <div className="rounded-lg border border-slate-600 bg-slate-700 p-3 shadow-sm">
-                                                        <span className="text-sm text-slate-200">
+                                                    <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">
+                                                        <span className="text-sm text-slate-400">
                                                             Anliegen
                                                             klassifizieren
                                                         </span>
@@ -396,8 +396,8 @@ const AiProPage = () => {
                                                     <Database className="h-6 w-6 text-white" />
                                                 </div>
                                                 <div className="flex-1">
-                                                    <div className="rounded-lg border border-slate-600 bg-slate-700 p-3 shadow-sm">
-                                                        <span className="text-sm text-slate-200">
+                                                    <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">
+                                                        <span className="text-sm text-slate-400">
                                                             CRM-System abfragen
                                                         </span>
                                                     </div>
@@ -409,8 +409,8 @@ const AiProPage = () => {
                                                     <Check className="h-6 w-6 text-white" />
                                                 </div>
                                                 <div className="flex-1">
-                                                    <div className="rounded-lg border border-slate-600 bg-slate-700 p-3 shadow-sm">
-                                                        <span className="text-sm text-slate-200">
+                                                    <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">
+                                                        <span className="text-sm text-slate-400">
                                                             Aktion ausführen
                                                         </span>
                                                     </div>
@@ -438,7 +438,7 @@ const AiProPage = () => {
                         <h2 className="mb-6 text-4xl text-white md:text-5xl">
                             Automatisierte Kommunikation
                             <br />
-                            <span className="text-slate-300">
+                            <span className="text-slate-400">
                                 auf höchstem Niveau
                             </span>
                         </h2>
@@ -539,7 +539,7 @@ const AiProPage = () => {
                         <h2 className="mb-6 text-4xl text-white md:text-5xl">
                             Bereit für komplexe
                             <br />
-                            <span className="text-slate-300">
+                            <span className="text-slate-400">
                                 AI-Automatisierung?
                             </span>
                         </h2>

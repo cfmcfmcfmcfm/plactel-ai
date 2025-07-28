@@ -17,9 +17,9 @@ const Summary = ({
     value: string | number;
 }) => {
     return (
-        <div className="flex justify-between border-b border-slate-700 pb-3">
-            <span className="text-slate-400">{label}</span>
-            <span className="text-white">{value}</span>
+        <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
+            <span className="text-slate-700 dark:text-slate-400">{label}</span>
+            <span className="text-slate-950 dark:text-white">{value}</span>
         </div>
     );
 };
@@ -105,8 +105,11 @@ const RoiCalculator = () => {
                     <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-800/50">
                         <Calculator className="h-8 w-8 text-blue-400" />
                     </div>
-                    <h2 className="mb-6 text-4xl text-white md:text-5xl">
-                        ROI <span className="text-slate-300">Rechner</span>
+                    <h2 className="mb-6 text-4xl md:text-5xl">
+                        ROI{' '}
+                        <span className="text-slate-700 dark:text-slate-400">
+                            Rechner
+                        </span>
                     </h2>
                     <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
                         Berechnen Sie Ihren Return on Investment mit Placetel AI
@@ -114,21 +117,20 @@ const RoiCalculator = () => {
                 </motion.div>
 
                 <motion.div
-                    className="grid overflow-clip rounded-2xl border border-slate-700 bg-slate-800/50 shadow-sm md:grid-cols-2"
+                    className="grid overflow-clip rounded-2xl border border-slate-300 bg-slate-200/50 shadow-sm md:grid-cols-2 dark:border-slate-700 dark:bg-slate-800/50"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
                 >
                     <div className="p-4 lg:p-8">
-                        <h3 className="mb-8 text-2xl text-white">
-                            Ihre Parameter
-                        </h3>
+                        <h3 className="mb-8 text-2xl">Ihre Parameter</h3>
                         <div className="space-y-8">
                             <div className="space-y-3">
-                                <Label className="text-base text-slate-300">
+                                <Label className="text-base text-slate-700 dark:text-slate-400">
                                     Tägliche Anrufe
                                 </Label>
+
                                 <Slider
                                     defaultValue={[inputs.anrufe]}
                                     min={0}
@@ -139,6 +141,7 @@ const RoiCalculator = () => {
                                     }
                                     className="w-full"
                                 />
+
                                 <span className="block text-sm text-slate-700 dark:text-slate-400">
                                     {inputs.anrufe} Anrufe/Tag
                                 </span>
@@ -146,7 +149,7 @@ const RoiCalculator = () => {
 
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div className="space-y-3">
-                                    <Label className="text-base text-slate-300">
+                                    <Label className="text-base text-slate-700 dark:text-slate-400">
                                         Dauer pro Anruf (Min)
                                     </Label>
                                     <Input
@@ -159,11 +162,11 @@ const RoiCalculator = () => {
                                             })
                                         }
                                         min={1}
-                                        className="border-slate-600 bg-slate-700 text-white placeholder:text-slate-400 focus:border-slate-500"
+                                        className="border-slate-700 bg-slate-700 text-white placeholder:text-slate-400 focus:border-slate-500"
                                     />
                                 </div>
                                 <div className="space-y-3">
-                                    <Label className="text-base text-slate-300">
+                                    <Label className="text-base text-slate-700 dark:text-slate-400">
                                         Stundensatz Mitarbeiter (€)
                                     </Label>
                                     <Input
@@ -176,7 +179,7 @@ const RoiCalculator = () => {
                                             })
                                         }
                                         min={1}
-                                        className="border-slate-600 bg-slate-700 text-white placeholder:text-slate-400 focus:border-slate-500"
+                                        className="border-slate-700 bg-slate-700 text-white placeholder:text-slate-400 focus:border-slate-500"
                                     />
                                 </div>
                             </div>
@@ -188,13 +191,13 @@ const RoiCalculator = () => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="space-y-6 bg-slate-800/50 p-4 lg:p-8"
+                        className="space-y-6 p-4 lg:p-8 dark:bg-slate-800/50"
                     >
                         <div className="mb-6 flex items-center space-x-3">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-500">
                                 <MessageCircle className="h-5 w-5 text-white" />
                             </div>
-                            <h3 className="text-xl text-white">
+                            <h3 className="text-xl">
                                 Ihr monatlicher AI-Mehrwert
                             </h3>
                         </div>
@@ -220,8 +223,9 @@ const RoiCalculator = () => {
                                 label="AI-Kosten pro Monat"
                                 value={format(Math.round(kosten)) + ' €'}
                             />
-                            <div className="flex justify-between border-b border-slate-700 pb-3">
-                                <span className="text-slate-400">
+
+                            <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
+                                <span className="text-slate-700 dark:text-slate-400">
                                     Return on AI-Investment
                                 </span>
                                 <span className="text-2xl text-green-400">

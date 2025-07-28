@@ -5,21 +5,15 @@ import { motion } from 'framer-motion';
 import { Clock, Users, Zap } from 'lucide-react';
 import ProductComparison from '@/components/molecules/ProductComparison';
 import RoiCalculator from '@/components/molecules/RoiCalculator';
+import PlayfulHero from '../molecules/PlayfulHero';
 
 export default function LandingPage() {
-    const companies = [
-        'Siemens',
-        'BMW',
-        'Deutsche Bank',
-        'SAP',
-        'Volkswagen',
-        'Bosch',
-    ];
-
     return (
         <div className="min-h-screen">
+            <PlayfulHero />
+
             {/* Hero Section */}
-            <section className="gradient-bg relative overflow-hidden py-20 lg:py-32">
+            {/* <section className="gradient-bg relative overflow-hidden py-20 lg:py-32">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <motion.div
@@ -44,7 +38,7 @@ export default function LandingPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1 }}
                         >
-                            <h1 className="mb-8 text-4xl leading-none font-light tracking-tight text-slate-950 md:text-7xl lg:text-8xl dark:text-slate-300">
+                            <h1 className="mb-8 text-4xl leading-none font-light tracking-tight text-slate-950 md:text-7xl lg:text-8xl dark:text-slate-400">
                                 Die{' '}
                                 <span className="text-slate-950 dark:text-slate-50">
                                     #1 AI-Lösung
@@ -69,7 +63,6 @@ export default function LandingPage() {
                             </Button>
                         </motion.div>
 
-                        {/* Company Logos */}
                         <div className="relative overflow-hidden">
                             <div className="animate-marquee flex w-max whitespace-nowrap">
                                 {companies.map((company, index) => (
@@ -92,7 +85,7 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Benefits Section */}
             <section className="py-20">
@@ -107,7 +100,7 @@ export default function LandingPage() {
                         <h2 className="mb-6 text-4xl md:text-5xl">
                             Warum Placetel AI?
                         </h2>
-                        <p className="text-xldark:text-slate-400 text-slate-700">
+                        <p className="text-xl text-slate-700 dark:text-slate-400">
                             Einfach. Intelligent. Sofort einsetzbar.
                         </p>
                     </motion.div>
@@ -128,7 +121,7 @@ export default function LandingPage() {
                                 24/7 Erreichbarkeit
                             </h3>
 
-                            <p className="text-slate-600 dark:text-slate-400">
+                            <p className="text-slate-700 dark:text-slate-400">
                                 Ihre Kunden erreichen Sie immer – auch außerhalb
                                 der Öffnungszeiten, am Wochenende und an
                                 Feiertagen.
@@ -148,7 +141,7 @@ export default function LandingPage() {
 
                             <h3 className="mb-4 text-xl">Team entlasten</h3>
 
-                            <p className="text-slate-600 dark:text-slate-400">
+                            <p className="text-slate-700 dark:text-slate-400">
                                 Bis zu 80% der Anrufe werden automatisch
                                 bearbeitet. Mehr Zeit für die Gespräche, die
                                 wirklich zählen.
@@ -168,7 +161,7 @@ export default function LandingPage() {
 
                             <h3 className="mb-4 text-xl">Sofort startklar</h3>
 
-                            <p className="text-slate-600 dark:text-slate-400">
+                            <p className="text-slate-700 dark:text-slate-400">
                                 Keine komplizierte Installation. Aktivierung
                                 direkt im Placetel Portal – in wenigen Minuten
                                 einsatzbereit.

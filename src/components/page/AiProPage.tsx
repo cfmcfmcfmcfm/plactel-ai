@@ -62,7 +62,7 @@ const AiProPage = () => {
                             className="mb-8"
                         >
                             <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500">
-                                <Zap className="h-8 w-8 text-white" />
+                                <Zap className="h-8 w-8" />
                             </div>
                         </motion.div>
 
@@ -147,7 +147,7 @@ const AiProPage = () => {
                                 <Card className="group h-full border-slate-300 bg-slate-200/50 transition-all duration-300 dark:border-slate-700 dark:bg-slate-900/50 dark:hover:border-slate-700 dark:hover:bg-slate-800/70">
                                     <CardContent className="p-8">
                                         <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500 transition-transform duration-300 group-hover:scale-110">
-                                            <feature.icon className="h-6 w-6 text-white" />
+                                            <feature.icon className="h-6 w-6" />
                                         </div>
 
                                         <h3 className="mb-4 text-xl">
@@ -176,11 +176,11 @@ const AiProPage = () => {
                             viewport={{ once: true }}
                         >
                             <div className="mb-8 rounded-2xl border border-slate-700 bg-slate-800 p-8">
-                                <h3 className="mb-4 text-xl text-white">
+                                <h3 className="mb-4 text-xl">
                                     Use Case: Automatisierte Koordination von
                                     Rauchwarnmelder-Wartungen
                                 </h3>
-                                <p className="text-slate-400">
+                                <p className="text-slate-600 dark:text-slate-400">
                                     Bei der Minol GmbH & Co. KG kommt es
                                     regelmäßig zu Stoßzeiten, wenn viele Kunden
                                     gleichzeitig wegen der Wartung ihrer
@@ -191,7 +191,7 @@ const AiProPage = () => {
                             </div>
 
                             <div className="rounded-2xl border border-slate-700 bg-slate-800 p-8">
-                                <h4 className="mb-4 flex items-center text-lg text-white">
+                                <h4 className="mb-4 flex items-center text-lg">
                                     <Check className="mr-2 h-5 w-5 text-green-400" />
                                     Lösung mit Placetel AI Pro
                                 </h4>
@@ -226,9 +226,9 @@ const AiProPage = () => {
                                 <CardContent className="p-8">
                                     <div className="mb-6 text-center">
                                         <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-purple-500">
-                                            <Play className="h-10 w-10 text-white" />
+                                            <Play className="h-10 w-10 text-current" />
                                         </div>
-                                        <h3 className="mb-2 text-xl text-white">
+                                        <h3 className="mb-2 text-xl">
                                             Demo Call
                                         </h3>
                                         <p className="text-slate-400">
@@ -289,7 +289,7 @@ const AiProPage = () => {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="mb-6 text-4xl text-white md:text-5xl">
+                            <h2 className="mb-6 text-4xl md:text-5xl">
                                 <span className="text-slate-400">
                                     Visueller
                                 </span>{' '}
@@ -350,8 +350,8 @@ const AiProPage = () => {
                                 <CardContent className="p-0">
                                     <div className="flex items-center justify-between border-b border-slate-700 p-4">
                                         <div className="flex items-center space-x-2">
-                                            <Code className="h-5 w-5 text-white" />
-                                            <span className="text-white">
+                                            <Code className="h-5 w-5 text-current" />
+                                            <span className="text-slate-50">
                                                 Visual Editor
                                             </span>
                                         </div>
@@ -366,7 +366,7 @@ const AiProPage = () => {
                                         <div className="space-y-6">
                                             <div className="flex items-center space-x-4">
                                                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500">
-                                                    <Phone className="h-6 w-6 text-white" />
+                                                    <Phone className="h-6 w-6 text-current" />
                                                 </div>
                                                 <div className="flex-1">
                                                     <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">
@@ -379,7 +379,7 @@ const AiProPage = () => {
 
                                             <div className="ml-8 flex items-center space-x-4">
                                                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500">
-                                                    <MessageSquare className="h-6 w-6 text-white" />
+                                                    <MessageSquare className="h-6 w-6 text-current" />
                                                 </div>
                                                 <div className="flex-1">
                                                     <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">
@@ -393,7 +393,7 @@ const AiProPage = () => {
 
                                             <div className="ml-16 flex items-center space-x-4">
                                                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500">
-                                                    <Database className="h-6 w-6 text-white" />
+                                                    <Database className="h-6 w-6 text-current" />
                                                 </div>
                                                 <div className="flex-1">
                                                     <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">
@@ -406,7 +406,7 @@ const AiProPage = () => {
 
                                             <div className="ml-8 flex items-center space-x-4">
                                                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500">
-                                                    <Check className="h-6 w-6 text-white" />
+                                                    <Check className="h-6 w-6 text-current" />
                                                 </div>
                                                 <div className="flex-1">
                                                     <div className="rounded-lg border border-slate-700 bg-slate-700 p-3 shadow-sm">

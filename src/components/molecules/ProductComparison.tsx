@@ -102,7 +102,7 @@ const ProductComparison = () => {
                                 <div className="mt-8 flex flex-wrap gap-4">
                                     <Button
                                         size="lg"
-                                        className="bg-blue-600 text-white hover:bg-blue-700"
+                                        className="bg-blue-600 text-slate-50 hover:bg-blue-700"
                                     >
                                         SmartDesk testen
                                     </Button>
@@ -164,7 +164,7 @@ const ProductComparison = () => {
                                 <div className="mt-8 flex flex-wrap gap-4">
                                     <Button
                                         size="lg"
-                                        className="bg-purple-600 text-white hover:bg-purple-700"
+                                        className="bg-purple-600 text-current hover:bg-purple-700"
                                     >
                                         AI Pro testen
                                     </Button>

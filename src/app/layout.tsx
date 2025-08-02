@@ -41,7 +41,7 @@ export default function RootLayout({
     return (
         <html lang="de" suppressHydrationWarning>
             <body
-                className={`${whyte.variable} relative bg-slate-100 font-sans text-slate-950 subpixel-antialiased selection:bg-blue-500 selection:text-white dark:bg-black dark:text-slate-100`}
+                className={`${whyte.variable} relative bg-slate-100 font-sans text-slate-950 subpixel-antialiased selection:bg-blue-500 selection:text-slate-50 dark:bg-black dark:text-slate-100`}
             >
                 <ThemeProvider
                     attribute="class"

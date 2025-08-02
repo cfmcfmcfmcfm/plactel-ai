@@ -264,10 +264,10 @@ const PlayfulHero = () => {
                         >
                             <div className="mb-4 flex items-center">
                                 <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-xl bg-green-500">
-                                    <Bot className="h-5 w-5 text-white" />
+                                    <Bot className="h-5 w-5 text-current" />
                                 </div>
                                 <div className="text-left">
-                                    <h3 className="text-lg font-medium text-white">
+                                    <h3 className="text-lg font-medium">
                                         Placetel AI
                                     </h3>
                                     <p className="text-sm text-slate-600 dark:text-slate-400">
@@ -318,7 +318,7 @@ const PlayfulHero = () => {
                                                 }}
                                                 className="rounded-lg border border-green-500/20 bg-green-500/10 p-4"
                                             >
-                                                <p className="text-center text-white">
+                                                <p className="text-center">
                                                     {
                                                         messagePairs[
                                                             currentResponseIndex

@@ -19,7 +19,7 @@ const Summary = ({
     return (
         <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
             <span className="text-slate-600 dark:text-slate-400">{label}</span>
-            <span className="text-slate-950 dark:text-white">{value}</span>
+            <span className="text-slate-950 dark:text-slate-50">{value}</span>
         </div>
     );
 };
@@ -162,7 +162,7 @@ const RoiCalculator = () => {
                                             })
                                         }
                                         min={1}
-                                        className="border-slate-700 bg-slate-700 text-white focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
+                                        className="border-slate-700 bg-slate-700 text-current focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
                                 </div>
                                 <div className="space-y-3">
@@ -179,7 +179,7 @@ const RoiCalculator = () => {
                                             })
                                         }
                                         min={1}
-                                        className="border-slate-700 bg-slate-700 text-white focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
+                                        className="border-slate-700 bg-slate-700 text-current focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
                                 </div>
                             </div>
@@ -195,7 +195,7 @@ const RoiCalculator = () => {
                     >
                         <div className="mb-6 flex items-center space-x-3">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-500">
-                                <MessageCircle className="h-5 w-5 text-white" />
+                                <MessageCircle className="h-5 w-5 text-current" />
                             </div>
                             <h3 className="text-xl">
                                 Ihr monatlicher AI-Mehrwert

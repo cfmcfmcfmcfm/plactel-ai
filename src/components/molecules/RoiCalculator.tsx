@@ -8,18 +8,41 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toPng } from 'html-to-image';
 import { Calculator, Download, FileText, MessageCircle } from 'lucide-react';
+import { AnimateNumber } from 'motion-plus/react';
+import { cn } from '@/lib/utils';
 
 const Summary = ({
     label,
     value,
+    suffix = '',
+    formatNumber = true,
+    className,
 }: {
     label: string;
     value: string | number;
+    suffix?: string;
+    formatNumber?: boolean;
+    className?: string;
 }) => {
+    const isNumber = typeof value === 'number';
+    const formatted =
+        isNumber && formatNumber ? value.toLocaleString('de-DE') : value;
     return (
-        <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
+        <div className="flex items-center justify-between border-b border-slate-300 py-3 dark:border-slate-700">
             <span className="text-slate-600 dark:text-slate-400">{label}</span>
-            <span className="text-slate-950 dark:text-slate-100">{value}</span>
+            <span
+                className={cn('text-slate-950 dark:text-slate-100', className)}
+            >
+                {isNumber ? (
+                    <>
+                        <AnimateNumber suffix={suffix ? suffix : ''}>
+                            {value}
+                        </AnimateNumber>
+                    </>
+                ) : (
+                    formatted
+                )}
+            </span>
         </div>
     );
 };
@@ -35,20 +58,63 @@ const RoiCalculator = () => {
         stundensatz: 35,
     });
 
+    // Helper to sanitize numbers
+    const safeNumber = (n: number) => (isNaN(n) || !isFinite(n) ? 0 : n);
+
+    // Sanitize inputs
+    const anrufe = safeNumber(Number(inputs.anrufe));
+    const dauer = Math.max(1, safeNumber(Number(inputs.dauer)));
+    const stundensatz = Math.max(1, safeNumber(Number(inputs.stundensatz)));
+
     const automationsgrad =
         inputs.faqs || inputs.weiterleitungen || inputs.termine ? 0.5 : 0.1;
     const tageProMonat = 20;
-    const automatisierteAnrufe = Math.round(
-        inputs.anrufe * tageProMonat * automationsgrad
+    const automatisierteAnrufe = safeNumber(
+        Math.round(anrufe * tageProMonat * automationsgrad)
     );
-    const freikapazitaet = +(
-        automatisierteAnrufe *
-        (inputs.dauer / 60)
-    ).toFixed(1);
-    const zeitwert = +(freikapazitaet * inputs.stundensatz).toFixed(0);
-    const potUmsatz = +(automatisierteAnrufe * 7).toFixed(0);
-    const kosten = 49 + automatisierteAnrufe * (inputs.dauer * 0.29);
-    const roi = +((zeitwert + potUmsatz) / kosten).toFixed(1);
+    const freikapazitaet = safeNumber(
+        +(automatisierteAnrufe * (dauer / 60)).toFixed(1)
+    );
+    const zeitwert = safeNumber(+(freikapazitaet * stundensatz).toFixed(0));
+    const potUmsatz = safeNumber(+(automatisierteAnrufe * 7).toFixed(0));
+    const kosten = safeNumber(49 + automatisierteAnrufe * (dauer * 0.29));
+    const roi =
+        kosten > 0
+            ? safeNumber(+((zeitwert + potUmsatz) / kosten).toFixed(1))
+            : 0;
+
+    const summaryRows = [
+        {
+            label: 'Automatisierte Anrufe',
+            value: automatisierteAnrufe,
+        },
+        {
+            label: 'Freigewordene Kapazität',
+            value: freikapazitaet,
+            suffix: ' Std.',
+        },
+        {
+            label: 'Wert der gewonnenen Zeit',
+            value: zeitwert,
+            suffix: ' €',
+        },
+        {
+            label: 'Pot. zusätzlicher Umsatz',
+            value: potUmsatz,
+            suffix: ' €',
+        },
+        {
+            label: 'AI-Kosten pro Monat',
+            value: Math.round(kosten),
+            suffix: ' €',
+        },
+        {
+            label: 'Return on AI-Investment',
+            value: roi,
+            suffix: ' x',
+            className: 'text-green-500 dark:text-green-500 text-xl font-bold',
+        },
+    ];
 
     const format = (num: number | string) =>
         typeof num === 'number' ? num.toLocaleString('de-DE') : num;
@@ -121,7 +187,7 @@ const RoiCalculator = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.2, once: true }}
                 >
                     <div className="p-4 lg:p-8">
                         <h3 className="mb-8 text-2xl">Ihre Parameter</h3>
@@ -143,7 +209,12 @@ const RoiCalculator = () => {
                                 />
 
                                 <span className="block text-sm text-slate-600 dark:text-slate-400">
-                                    {inputs.anrufe} Anrufe/Tag
+                                    <AnimateNumber>
+                                        {format(inputs.anrufe)}
+                                    </AnimateNumber>{' '}
+                                    <span className="relative inline-block translate-px">
+                                        Anrufe / Tag
+                                    </span>
                                 </span>
                             </div>
 
@@ -155,16 +226,21 @@ const RoiCalculator = () => {
                                     <Input
                                         type="number"
                                         value={inputs.dauer}
-                                        onChange={(e) =>
+                                        onChange={(e) => {
+                                            const val =
+                                                e.target.value === ''
+                                                    ? 1
+                                                    : Number(e.target.value);
                                             setInputs({
                                                 ...inputs,
-                                                dauer: +e.target.value,
-                                            })
-                                        }
+                                                dauer: Math.max(1, val),
+                                            });
+                                        }}
                                         min={1}
                                         className="border-slate-700 bg-slate-700 text-current focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
                                 </div>
+
                                 <div className="space-y-3">
                                     <Label className="text-base text-slate-600 dark:text-slate-400">
                                         Stundensatz Mitarbeiter (€)
@@ -172,12 +248,16 @@ const RoiCalculator = () => {
                                     <Input
                                         type="number"
                                         value={inputs.stundensatz}
-                                        onChange={(e) =>
+                                        onChange={(e) => {
+                                            const val =
+                                                e.target.value === ''
+                                                    ? 1
+                                                    : Number(e.target.value);
                                             setInputs({
                                                 ...inputs,
-                                                stundensatz: +e.target.value,
-                                            })
-                                        }
+                                                stundensatz: Math.max(1, val),
+                                            });
+                                        }}
                                         min={1}
                                         className="border-slate-700 bg-slate-700 text-current focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
@@ -202,36 +282,16 @@ const RoiCalculator = () => {
                             </h3>
                         </div>
 
-                        <div className="space-y-4">
-                            <Summary
-                                label="Automatisierte Anrufe"
-                                value={format(automatisierteAnrufe)}
-                            />
-                            <Summary
-                                label="Freigewordene Kapazität"
-                                value={`${freikapazitaet} Std.`}
-                            />
-                            <Summary
-                                label="Wert der gewonnenen Zeit"
-                                value={format(zeitwert) + ' €'}
-                            />
-                            <Summary
-                                label="Pot. zusätzlicher Umsatz"
-                                value={format(potUmsatz) + ' €'}
-                            />
-                            <Summary
-                                label="AI-Kosten pro Monat"
-                                value={format(Math.round(kosten)) + ' €'}
-                            />
-
-                            <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
-                                <span className="text-slate-600 dark:text-slate-400">
-                                    Return on AI-Investment
-                                </span>
-                                <span className="text-2xl text-green-400">
-                                    {roi}×
-                                </span>
-                            </div>
+                        <div>
+                            {summaryRows.map((row) => (
+                                <Summary
+                                    key={row.label}
+                                    label={row.label}
+                                    value={row.value}
+                                    suffix={row.suffix}
+                                    className={row.className}
+                                />
+                            ))}
                         </div>
 
                         <div className="mt-8 space-y-3">

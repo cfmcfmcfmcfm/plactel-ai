@@ -4,6 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Check, Phone, Zap } from 'lucide-react';
+import { Switch } from '@/components/ui/switch';
+import { AnimateNumber } from 'motion-plus/react';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 const ProductComparison = () => {
     const smartDeskFeatures = [
@@ -23,6 +27,11 @@ const ProductComparison = () => {
         'Debugging & Testing im Browser',
         'Optional: Bring Your Own LLM',
     ];
+
+    const [isYearly, setIsYearly] = useState(false);
+
+    // const proPrice = isYearly ? 299 * 12 * 0.9 : 299; // 10% discount for yearly
+    const proPrice = isYearly ? 299 * 12 * 0.91 : 299; // 10% discount for yearly
 
     return (
         <section className="relative py-20">
@@ -115,6 +124,7 @@ const ProductComparison = () => {
                         </Card>
 
                         {/* Pro Card */}
+                        {/* Pro Card */}
                         <Card className="h-full">
                             <CardContent className="flex h-full flex-col items-start justify-between p-8">
                                 <div>
@@ -131,11 +141,47 @@ const ProductComparison = () => {
                                             Agents
                                         </p>
 
+                                        {/* Toggle Switch */}
+                                        <div className="mb-4 flex items-center justify-center gap-3">
+                                            <span
+                                                className={cn(
+                                                    isYearly &&
+                                                        'text-slate-400 dark:text-slate-400'
+                                                )}
+                                            >
+                                                Monatlich
+                                            </span>
+
+                                            <Switch
+                                                checked={isYearly}
+                                                onCheckedChange={setIsYearly}
+                                                id="pro-payment-toggle"
+                                            />
+
+                                            <span
+                                                className={cn(
+                                                    !isYearly &&
+                                                        'text-slate-400 dark:text-slate-400'
+                                                )}
+                                            >
+                                                Jährlich
+                                            </span>
+                                        </div>
+
                                         <div className="mb-4">
                                             <div className="mb-2 text-5xl">
-                                                299€
+                                                <AnimateNumber suffix=" €">
+                                                    {Number(
+                                                        proPrice.toFixed(2)
+                                                    )}
+                                                </AnimateNumber>
                                             </div>
-                                            <div className="">Eur/Monat</div>
+
+                                            <div className="text-sm">
+                                                {isYearly
+                                                    ? 'Eur/Jahr (10% Rabatt)'
+                                                    : 'Eur/Monat'}
+                                            </div>
                                             <div className="text-sm text-slate-600 dark:text-slate-400">
                                                 (+0,29€ pro Minute)
                                             </div>

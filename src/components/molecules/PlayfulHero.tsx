@@ -126,23 +126,6 @@ const PlayfulHero = () => {
         };
     }, []);
 
-    const resetAnimation = () => {
-        setShowChaos(true);
-        setCurrentPhase(0);
-        setCurrentResponseIndex(0);
-        setShowResponses(false);
-
-        setTimeout(() => {
-            setCurrentPhase(1);
-            setShowResponses(true);
-        }, 4000);
-
-        setTimeout(() => {
-            setShowChaos(false);
-            setCurrentPhase(2);
-        }, 8000);
-    };
-
     if (!isClient) return null;
 
     return (

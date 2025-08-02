@@ -18,7 +18,7 @@ const Summary = ({
 }) => {
     return (
         <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
-            <span className="text-slate-700 dark:text-slate-400">{label}</span>
+            <span className="text-slate-600 dark:text-slate-400">{label}</span>
             <span className="text-slate-950 dark:text-white">{value}</span>
         </div>
     );
@@ -107,11 +107,11 @@ const RoiCalculator = () => {
                     </div>
                     <h2 className="mb-6 text-4xl md:text-5xl">
                         ROI{' '}
-                        <span className="text-slate-700 dark:text-slate-400">
+                        <span className="text-slate-600 dark:text-slate-400">
                             Rechner
                         </span>
                     </h2>
-                    <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
+                    <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
                         Berechnen Sie Ihren Return on Investment mit Placetel AI
                     </p>
                 </motion.div>
@@ -127,7 +127,7 @@ const RoiCalculator = () => {
                         <h3 className="mb-8 text-2xl">Ihre Parameter</h3>
                         <div className="space-y-8">
                             <div className="space-y-3">
-                                <Label className="text-base text-slate-700 dark:text-slate-400">
+                                <Label className="text-base text-slate-600 dark:text-slate-400">
                                     Tägliche Anrufe
                                 </Label>
 
@@ -142,14 +142,14 @@ const RoiCalculator = () => {
                                     className="w-full"
                                 />
 
-                                <span className="block text-sm text-slate-700 dark:text-slate-400">
+                                <span className="block text-sm text-slate-600 dark:text-slate-400">
                                     {inputs.anrufe} Anrufe/Tag
                                 </span>
                             </div>
 
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div className="space-y-3">
-                                    <Label className="text-base text-slate-700 dark:text-slate-400">
+                                    <Label className="text-base text-slate-600 dark:text-slate-400">
                                         Dauer pro Anruf (Min)
                                     </Label>
                                     <Input
@@ -162,11 +162,11 @@ const RoiCalculator = () => {
                                             })
                                         }
                                         min={1}
-                                        className="border-slate-700 bg-slate-700 text-white placeholder:text-slate-400 focus:border-slate-500"
+                                        className="border-slate-700 bg-slate-700 text-white focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
                                 </div>
                                 <div className="space-y-3">
-                                    <Label className="text-base text-slate-700 dark:text-slate-400">
+                                    <Label className="text-base text-slate-600 dark:text-slate-400">
                                         Stundensatz Mitarbeiter (€)
                                     </Label>
                                     <Input
@@ -179,7 +179,7 @@ const RoiCalculator = () => {
                                             })
                                         }
                                         min={1}
-                                        className="border-slate-700 bg-slate-700 text-white placeholder:text-slate-400 focus:border-slate-500"
+                                        className="border-slate-700 bg-slate-700 text-white focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
                                 </div>
                             </div>
@@ -225,7 +225,7 @@ const RoiCalculator = () => {
                             />
 
                             <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
-                                <span className="text-slate-700 dark:text-slate-400">
+                                <span className="text-slate-600 dark:text-slate-400">
                                     Return on AI-Investment
                                 </span>
                                 <span className="text-2xl text-green-400">

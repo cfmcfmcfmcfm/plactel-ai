@@ -247,7 +247,7 @@ const PlayfulHero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.9 }}
-                        className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-slate-700 dark:text-slate-400"
+                        className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-slate-600 dark:text-slate-400"
                     >
                         Placetel AI versteht jede Kundenanfrage und antwortet
                         sofort – während Ihr Team sich auf das Wesentliche
@@ -270,7 +270,7 @@ const PlayfulHero = () => {
                                     <h3 className="text-lg font-medium text-white">
                                         Placetel AI
                                     </h3>
-                                    <p className="text-sm text-slate-400">
+                                    <p className="text-sm text-slate-600 dark:text-slate-400">
                                         Intelligent. Schnell. Zuverlässig.
                                     </p>
                                 </div>
@@ -283,7 +283,6 @@ const PlayfulHero = () => {
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        // className="flex items-center space-x-3 text-slate-400 p-4"
                                         className="/20 flex w-full items-center justify-center rounded-lg border border-slate-300 bg-slate-500/30 p-4"
                                     >
                                         <Loader2 className="h-5 w-5 animate-spin" />
@@ -329,20 +328,6 @@ const PlayfulHero = () => {
                                                 </p>
                                             </motion.div>
                                         </AnimatePresence>
-
-                                        {/* Progress Indicator */}
-                                        {/* <div className="flex justify-center mt-4 space-x-1">
-                    {messagePairs.map((_, index) => (
-                      <div
-                        key={index}
-                        className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                          index === currentResponseIndex
-                            ? "bg-green-400"
-                            : "bg-slate-600"
-                        }`}
-                      />
-                    ))}
-                  </div> */}
                                     </div>
                                 )}
                             </div>
@@ -363,17 +348,6 @@ const PlayfulHero = () => {
                             Demo ansehen
                         </Button>
                     </motion.div>
-
-                    {/* Reset Button */}
-                    {/* <motion.button
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 2 }}
-                        onClick={resetAnimation}
-                        className="text-sm text-slate-400 underline transition-colors hover:text-slate-400"
-                    >
-                        Animation erneut abspielen
-                    </motion.button> */}
                 </div>
             </div>
         </section>

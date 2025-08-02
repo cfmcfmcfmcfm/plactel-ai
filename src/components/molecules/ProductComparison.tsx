@@ -37,7 +37,7 @@ const ProductComparison = () => {
                     <h2 className="mb-6 text-4xl md:text-5xl">
                         Wählen Sie Ihre AI-Lösung
                     </h2>
-                    <p className="mx-auto max-w-3xl text-xl text-slate-700 dark:text-slate-400">
+                    <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
                         Vom einfachen SmartDesk bis zur vollständig anpassbaren
                         Pro-Version
                     </p>
@@ -74,7 +74,7 @@ const ProductComparison = () => {
                                                 0€
                                             </div>
                                             <div className=" ">Eur/Monat</div>
-                                            <div className="text-sm text-slate-700 dark:text-slate-400">
+                                            <div className="text-sm text-slate-600 dark:text-slate-400">
                                                 (+0,39€ pro Minute)
                                             </div>
                                         </div>
@@ -136,7 +136,7 @@ const ProductComparison = () => {
                                                 299€
                                             </div>
                                             <div className="">Eur/Monat</div>
-                                            <div className="text-sm text-slate-700 dark:text-slate-400">
+                                            <div className="text-sm text-slate-600 dark:text-slate-400">
                                                 (+0,29€ pro Minute)
                                             </div>
                                         </div>

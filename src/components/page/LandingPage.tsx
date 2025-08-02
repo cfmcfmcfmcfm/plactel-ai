@@ -20,7 +20,7 @@ export default function LandingPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="mb-8 flex flex-col justify-center border-y border-slate-300 text-center text-sm tracking-wider text-slate-700 uppercase lg:flex-row dark:border-slate-700 dark:text-slate-400"
+                            className="mb-8 flex flex-col justify-center border-y border-slate-300 text-center text-sm tracking-wider text-slate-600 uppercase lg:flex-row dark:border-slate-700 dark:dark:text-slate-400 text-slate-400 "
                         >
                             <span className="min-w-72 border-slate-300 py-1 lg:border-r dark:border-slate-700">
                                 #1 in Kundenzufriedenheit
@@ -38,7 +38,7 @@ export default function LandingPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1 }}
                         >
-                            <h1 className="mb-8 text-4xl leading-none font-light tracking-tight text-slate-950 md:text-7xl lg:text-8xl dark:text-slate-400">
+                            <h1 className="mb-8 text-4xl leading-none font-light tracking-tight text-slate-950 md:text-7xl lg:text-8xl dark:dark:text-slate-400 text-slate-400 ">
                                 Die{' '}
                                 <span className="text-slate-950 dark:text-slate-50">
                                     #1 AI-Lösung
@@ -68,7 +68,7 @@ export default function LandingPage() {
                                 {companies.map((company, index) => (
                                     <div
                                         key={index}
-                                        className="mx-8 text-lg font-medium text-slate-400 md:mx-12"
+                                        className="mx-8 text-lg font-medium dark:text-slate-400 text-slate-400  md:mx-12"
                                     >
                                         {company}
                                     </div>
@@ -76,7 +76,7 @@ export default function LandingPage() {
                                 {companies.map((company, index) => (
                                     <div
                                         key={`duplicate-${index}`}
-                                        className="mx-8 text-lg font-medium text-slate-400 md:mx-12"
+                                        className="mx-8 text-lg font-medium dark:text-slate-400 text-slate-400  md:mx-12"
                                     >
                                         {company}
                                     </div>
@@ -100,7 +100,7 @@ export default function LandingPage() {
                         <h2 className="mb-6 text-4xl md:text-5xl">
                             Warum Placetel AI?
                         </h2>
-                        <p className="text-xl text-slate-700 dark:text-slate-400">
+                        <p className="text-xl text-slate-600 dark:dark:text-slate-400">
                             Einfach. Intelligent. Sofort einsetzbar.
                         </p>
                     </motion.div>
@@ -121,7 +121,7 @@ export default function LandingPage() {
                                 24/7 Erreichbarkeit
                             </h3>
 
-                            <p className="text-slate-700 dark:text-slate-400">
+                            <p className="text-slate-600 dark:text-slate-400">
                                 Ihre Kunden erreichen Sie immer – auch außerhalb
                                 der Öffnungszeiten, am Wochenende und an
                                 Feiertagen.
@@ -141,7 +141,7 @@ export default function LandingPage() {
 
                             <h3 className="mb-4 text-xl">Team entlasten</h3>
 
-                            <p className="text-slate-700 dark:text-slate-400">
+                            <p className="text-slate-600 dark:text-slate-400">
                                 Bis zu 80% der Anrufe werden automatisch
                                 bearbeitet. Mehr Zeit für die Gespräche, die
                                 wirklich zählen.
@@ -161,7 +161,7 @@ export default function LandingPage() {
 
                             <h3 className="mb-4 text-xl">Sofort startklar</h3>
 
-                            <p className="text-slate-700 dark:text-slate-400">
+                            <p className="text-slate-600 dark:text-slate-400">
                                 Keine komplizierte Installation. Aktivierung
                                 direkt im Placetel Portal – in wenigen Minuten
                                 einsatzbereit.
@@ -189,7 +189,7 @@ export default function LandingPage() {
                         <h2 className="mb-6 text-4xl md:text-5xl">
                             Bereit für smarte Kommunikation?
                         </h2>
-                        <p className="mb-8 text-xl text-slate-700 dark:text-slate-400">
+                        <p className="mb-8 text-xl text-slate-600 dark:text-slate-400">
                             Testen Sie jetzt Placetel AI und verlieren Sie kein
                             Gespräch – ganz ohne zusätzlichen Aufwand im Team.
                         </p>

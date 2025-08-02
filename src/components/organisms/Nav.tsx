@@ -22,7 +22,7 @@ const Nav = () => {
                                 'transition-colors hover:text-purple-600 dark:hover:text-purple-300',
                                 pathname === '/ai-smartdesk'
                                     ? 'text-purple-700 dark:text-purple-500'
-                                    : 'text-slate-700 dark:text-slate-400'
+                                    : 'text-slate-600 dark:text-slate-400'
                             )}
                         >
                             AI SmartDesk
@@ -34,7 +34,7 @@ const Nav = () => {
                                 'transition-colors hover:text-purple-600 dark:hover:text-purple-300',
                                 pathname === '/ai-pro'
                                     ? 'text-purple-700 dark:text-purple-500'
-                                    : 'text-slate-700 dark:text-slate-400'
+                                    : 'text-slate-600 dark:text-slate-400'
                             )}
                         >
                             AI Pro

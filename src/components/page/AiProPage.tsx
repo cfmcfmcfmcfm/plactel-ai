@@ -71,7 +71,7 @@ const AiProPage = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1 }}
                         >
-                            <h1 className="mb-8 text-5xl leading-none font-light text-white md:text-6xl lg:text-7xl">
+                            <h1 className="mb-8 text-5xl leading-none md:text-6xl lg:text-7xl">
                                 Flexibler AI-Agent für
                                 <br />
                                 <span className="text-slate-400">
@@ -84,7 +84,7 @@ const AiProPage = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-xldark:text-slate-400 mx-auto mb-12 max-w-4xl text-slate-700"
+                            className="mx-auto mb-12 max-w-4xl text-xl text-slate-600 dark:text-slate-400"
                         >
                             Hohe Gesprächsvolumen, individuelle Anliegen,
                             heterogene Systeme? AI Pro erkennt Inhalte live,
@@ -120,14 +120,14 @@ const AiProPage = () => {
                         viewport={{ once: true }}
                         className="mb-16 text-center"
                     >
-                        <h2 className="mb-6 text-4xl text-white md:text-5xl">
+                        <h2 className="mb-6 text-4xl md:text-5xl">
                             Flexibilität bis ins
                             <br />
-                            <span className="text-slate-400">
+                            <span className="text-slate-600 dark:text-slate-400">
                                 kleinste Detail
                             </span>
                         </h2>
-                        <p className="text-xldark:text-slate-400 text-slate-700">
+                        <p className="text-xl text-slate-600 dark:text-slate-400">
                             Die smarte Lösung für komplexe Kommunikation
                         </p>
                     </motion.div>
@@ -144,17 +144,17 @@ const AiProPage = () => {
                                 }}
                                 viewport={{ once: true }}
                             >
-                                <Card className="group h-full border-slate-700 bg-slate-900/50 transition-all duration-300 hover:border-slate-700 hover:bg-slate-800/70">
+                                <Card className="group h-full border-slate-300 bg-slate-200/50 transition-all duration-300 dark:border-slate-700 dark:bg-slate-900/50 dark:hover:border-slate-700 dark:hover:bg-slate-800/70">
                                     <CardContent className="p-8">
                                         <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500 transition-transform duration-300 group-hover:scale-110">
                                             <feature.icon className="h-6 w-6 text-white" />
                                         </div>
 
-                                        <h3 className="mb-4 text-xl text-white">
+                                        <h3 className="mb-4 text-xl">
                                             {feature.title}
                                         </h3>
 
-                                        <p className="text-slate-400">
+                                        <p className="dark: text-slate-400">
                                             {feature.description}
                                         </p>
                                     </CardContent>
@@ -238,7 +238,7 @@ const AiProPage = () => {
 
                                     <div className="mb-6 rounded-xl border border-slate-700 p-6">
                                         <div className="mb-4 flex items-center justify-between">
-                                            <span className="text-sm text-slate-700 dark:text-slate-400">
+                                            <span className="text-sm text-slate-600 dark:text-slate-400">
                                                 Workflow Beispiel
                                             </span>
                                             <div className="h-2 w-2 animate-pulse rounded-full bg-green-400"></div>
@@ -295,7 +295,7 @@ const AiProPage = () => {
                                 </span>{' '}
                                 Editor
                             </h2>
-                            <p className="text-xldark:text-slate-400 mb-6 text-slate-700">
+                            <p className="mb-6 text-xl text-slate-600 dark:text-slate-400">
                                 Maßgeschneiderte Gesprächsverläufe – ohne
                                 Aufwand.
                             </p>
@@ -435,14 +435,14 @@ const AiProPage = () => {
                         viewport={{ once: true }}
                         className="mb-16 text-center"
                     >
-                        <h2 className="mb-6 text-4xl text-white md:text-5xl">
+                        <h2 className="mb-6 text-4xl md:text-5xl">
                             Automatisierte Kommunikation
                             <br />
                             <span className="text-slate-400">
                                 auf höchstem Niveau
                             </span>
                         </h2>
-                        <p className="text-xldark:text-slate-400 text-slate-700">
+                        <p className="text-xl text-slate-600 dark:text-slate-400">
                             Individuell, skalierbar und sofort einsatzbereit
                         </p>
                     </motion.div>
@@ -458,7 +458,7 @@ const AiProPage = () => {
                             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-700 transition-colors duration-300 group-hover:bg-slate-600">
                                 <Settings className="h-8 w-8 text-purple-400" />
                             </div>
-                            <h3 className="mb-3 text-lg text-white">
+                            <h3 className="mb-3 text-lg">
                                 Vollständig anpassbar
                             </h3>
                             <p className="text-sm text-slate-400">
@@ -477,9 +477,7 @@ const AiProPage = () => {
                             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-700 transition-colors duration-300 group-hover:bg-slate-600">
                                 <Database className="h-8 w-8 text-blue-400" />
                             </div>
-                            <h3 className="mb-3 text-lg text-white">
-                                System-Integration
-                            </h3>
+                            <h3 className="mb-3 text-lg">System-Integration</h3>
                             <p className="text-sm text-slate-400">
                                 Nahtlose Anbindung an CRM, Datenbanken und
                                 bestehende Tools
@@ -496,9 +494,7 @@ const AiProPage = () => {
                             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-700 transition-colors duration-300 group-hover:bg-slate-600">
                                 <Users className="h-8 w-8 text-green-400" />
                             </div>
-                            <h3 className="mb-3 text-lg text-white">
-                                Skalierbar
-                            </h3>
+                            <h3 className="mb-3 text-lg">Skalierbar</h3>
                             <p className="text-sm text-slate-400">
                                 Wächst mit Ihrem Unternehmen und passt sich an
                                 veränderte Anforderungen an
@@ -515,7 +511,7 @@ const AiProPage = () => {
                             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-700 transition-colors duration-300 group-hover:bg-slate-600">
                                 <Clock className="h-8 w-8 text-orange-400" />
                             </div>
-                            <h3 className="mb-3 text-lg text-white">
+                            <h3 className="mb-3 text-lg">
                                 Sofort einsatzbereit
                             </h3>
                             <p className="text-sm text-slate-400">
@@ -536,14 +532,14 @@ const AiProPage = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="mb-6 text-4xl text-white md:text-5xl">
+                        <h2 className="mb-6 text-4xl md:text-5xl">
                             Bereit für komplexe
                             <br />
                             <span className="text-slate-400">
                                 AI-Automatisierung?
                             </span>
                         </h2>
-                        <p className="text-xldark:text-slate-400 mb-8 text-slate-700">
+                        <p className="mb-8 text-xl text-slate-600 dark:text-slate-400">
                             Entdecken Sie die Möglichkeiten von AI Pro und
                             automatisieren Sie auch die komplexesten
                             Kommunikationsprozesse in Ihrem Unternehmen.

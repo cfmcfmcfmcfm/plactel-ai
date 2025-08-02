@@ -295,7 +295,7 @@ const AiSmartDeskPage = () => {
                             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-700 transition-colors duration-300 group-hover:bg-slate-600">
                                 <Users className="h-8 w-8 text-orange-400" />
                             </div>
-                            <h3 className="mb-3 text-lg text-slate-50">
+                            <h3 className="mb-3 text-lg text-slate-100">
                                 80% Automatisierung
                             </h3>
                             <p className="text-sm text-slate-600 dark:text-slate-400">
@@ -317,7 +317,7 @@ const AiSmartDeskPage = () => {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="mb-6 text-4xl text-slate-50 md:text-5xl">
+                            <h2 className="mb-6 text-4xl text-slate-100 md:text-5xl">
                                 Einrichtung direkt im
                                 <br />
                                 <span className="text-slate-600 dark:text-slate-400">
@@ -348,7 +348,7 @@ const AiSmartDeskPage = () => {
                         >
                             <Card className="border-slate-700 bg-slate-900/50">
                                 <CardContent className="p-8">
-                                    <h3 className="mb-6 text-xl text-slate-50">
+                                    <h3 className="mb-6 text-xl text-slate-100">
                                         In wenigen Schritten eingerichtet:
                                     </h3>
 
@@ -359,7 +359,7 @@ const AiSmartDeskPage = () => {
                                                 className="flex items-center"
                                             >
                                                 <div className="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500">
-                                                    <span className="text-sm text-slate-50">
+                                                    <span className="text-sm text-slate-100">
                                                         {index + 1}
                                                     </span>
                                                 </div>
@@ -385,7 +385,7 @@ const AiSmartDeskPage = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="mb-6 text-4xl text-slate-50 md:text-5xl">
+                        <h2 className="mb-6 text-4xl text-slate-100 md:text-5xl">
                             Bereit für{' '}
                             <span className="text-slate-600 dark:text-slate-400">
                                 smarte Kommunikation?

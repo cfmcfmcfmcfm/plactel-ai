@@ -40,7 +40,7 @@ export default function LandingPage() {
                         >
                             <h1 className="mb-8 text-4xl leading-none font-light tracking-tight text-slate-950 md:text-7xl lg:text-8xl dark:dark:text-slate-400 text-slate-400 ">
                                 Die{' '}
-                                <span className="text-slate-950 dark:text-slate-50">
+                                <span className="text-slate-950 dark:text-slate-100">
                                     #1 AI-Lösung
                                 </span>
                                 <br />

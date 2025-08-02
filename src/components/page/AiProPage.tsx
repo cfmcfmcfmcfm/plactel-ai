@@ -351,7 +351,7 @@ const AiProPage = () => {
                                     <div className="flex items-center justify-between border-b border-slate-700 p-4">
                                         <div className="flex items-center space-x-2">
                                             <Code className="h-5 w-5 text-current" />
-                                            <span className="text-slate-50">
+                                            <span className="text-slate-100">
                                                 Visual Editor
                                             </span>
                                         </div>

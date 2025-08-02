@@ -22,7 +22,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     href="/smartdesk"
-                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-50"
+                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-100"
                                 >
                                     AI SmartDesk
                                 </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     href="/pro"
-                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-50"
+                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-100"
                                 >
                                     AI Pro
                                 </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-50"
+                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-100"
                                 >
                                     Über uns
                                 </a>
@@ -52,7 +52,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-50"
+                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-100"
                                 >
                                     Kontakt
                                 </a>
@@ -66,7 +66,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-50"
+                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-100"
                                 >
                                     Impressum
                                 </a>
@@ -74,7 +74,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-50"
+                                    className="transition-colors hover:text-slate-950 dark:hover:text-slate-100"
                                 >
                                     Datenschutz
                                 </a>

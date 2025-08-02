@@ -102,7 +102,7 @@ const ProductComparison = () => {
                                 <div className="mt-8 flex flex-wrap gap-4">
                                     <Button
                                         size="lg"
-                                        className="bg-blue-600 text-slate-50 hover:bg-blue-700"
+                                        className="bg-blue-600 text-slate-100 hover:bg-blue-700"
                                     >
                                         SmartDesk testen
                                     </Button>

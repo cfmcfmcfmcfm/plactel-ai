@@ -19,7 +19,7 @@ const Summary = ({
     return (
         <div className="flex justify-between border-b border-slate-300 pb-3 dark:border-slate-700">
             <span className="text-slate-600 dark:text-slate-400">{label}</span>
-            <span className="text-slate-950 dark:text-slate-50">{value}</span>
+            <span className="text-slate-950 dark:text-slate-100">{value}</span>
         </div>
     );
 };

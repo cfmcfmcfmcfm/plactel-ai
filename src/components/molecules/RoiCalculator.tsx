@@ -28,8 +28,8 @@ const Summary = ({
     const formatted =
         isNumber && formatNumber ? value.toLocaleString('de-DE') : value;
     return (
-        <div className="flex items-center justify-between border-b border-slate-300 py-3 dark:border-slate-700">
-            <span className="text-slate-600 dark:text-slate-400">{label}</span>
+        <div className="flex items-center justify-between border-b border-slate-200 py-3 dark:border-slate-700">
+            <span className="text-slate-500 dark:text-slate-400">{label}</span>
             <span
                 className={cn('text-slate-950 dark:text-slate-100', className)}
             >
@@ -171,19 +171,14 @@ const RoiCalculator = () => {
                     <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-800/50">
                         <Calculator className="h-8 w-8 text-blue-400" />
                     </div>
-                    <h2 className="mb-6 text-4xl md:text-5xl">
-                        ROI{' '}
-                        <span className="text-slate-600 dark:text-slate-400">
-                            Rechner
-                        </span>
-                    </h2>
-                    <p className="mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-400">
+                    <h2 className="mb-6 text-4xl md:text-5xl">ROI Rechner</h2>
+                    <p className="mx-auto max-w-3xl text-xl text-slate-500 dark:text-slate-400">
                         Berechnen Sie Ihren Return on Investment mit Placetel AI
                     </p>
                 </motion.div>
 
                 <motion.div
-                    className="grid overflow-clip rounded-2xl border border-slate-300 bg-slate-200/50 shadow-sm md:grid-cols-2 dark:border-slate-700 dark:bg-slate-800/50"
+                    className="grid overflow-clip rounded-2xl border border-slate-200 bg-slate-200/50 md:grid-cols-2 dark:border-slate-700 dark:bg-slate-800/50"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -193,7 +188,7 @@ const RoiCalculator = () => {
                         <h3 className="mb-8 text-2xl">Ihre Parameter</h3>
                         <div className="space-y-8">
                             <div className="space-y-3">
-                                <Label className="text-base text-slate-600 dark:text-slate-400">
+                                <Label className="text-base text-slate-500 dark:text-slate-400">
                                     Tägliche Anrufe
                                 </Label>
 
@@ -208,7 +203,7 @@ const RoiCalculator = () => {
                                     className="w-full"
                                 />
 
-                                <span className="block text-sm text-slate-600 dark:text-slate-400">
+                                <span className="block text-sm text-slate-500 dark:text-slate-400">
                                     <AnimateNumber>
                                         {format(inputs.anrufe)}
                                     </AnimateNumber>{' '}
@@ -220,7 +215,7 @@ const RoiCalculator = () => {
 
                             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                                 <div className="space-y-3">
-                                    <Label className="text-base text-slate-600 dark:text-slate-400">
+                                    <Label className="text-base text-slate-500 dark:text-slate-400">
                                         Dauer pro Anruf (Min)
                                     </Label>
                                     <Input
@@ -237,12 +232,11 @@ const RoiCalculator = () => {
                                             });
                                         }}
                                         min={1}
-                                        className="border-slate-700 bg-slate-700 text-current focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
                                 </div>
 
                                 <div className="space-y-3">
-                                    <Label className="text-base text-slate-600 dark:text-slate-400">
+                                    <Label className="text-base text-slate-500 dark:text-slate-400">
                                         Stundensatz Mitarbeiter (€)
                                     </Label>
                                     <Input
@@ -259,7 +253,6 @@ const RoiCalculator = () => {
                                             });
                                         }}
                                         min={1}
-                                        className="border-slate-700 bg-slate-700 text-current focus:border-slate-500 dark:text-slate-400 placeholder:dark:text-slate-400"
                                     />
                                 </div>
                             </div>

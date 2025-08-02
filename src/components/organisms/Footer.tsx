@@ -11,14 +11,14 @@ const Footer = () => {
                         {/* <Logo /> */}
                         <ModeToggle />
 
-                        <p className="text-slate-600 dark:text-slate-400">
+                        <p className="text-slate-500 dark:text-slate-400">
                             Die Zukunft der Geschäftstelefonie ist AI.
                         </p>
                     </div>
 
                     <div>
                         <h4 className="mb-4 text-xs uppercase">Produkte</h4>
-                        <ul className="space-y-2 text-slate-600 dark:text-slate-400">
+                        <ul className="space-y-2 text-slate-500 dark:text-slate-400">
                             <li>
                                 <Link
                                     href="/smartdesk"
@@ -40,7 +40,7 @@ const Footer = () => {
 
                     <div>
                         <h4 className="mb-4 text-xs uppercase">Unternehmen</h4>
-                        <ul className="space-y-2 text-slate-600 dark:text-slate-400">
+                        <ul className="space-y-2 text-slate-500 dark:text-slate-400">
                             <li>
                                 <a
                                     href="#"
@@ -62,7 +62,7 @@ const Footer = () => {
 
                     <div>
                         <h4 className="mb-4 text-xs uppercase">Legal</h4>
-                        <ul className="space-y-2 text-slate-600 dark:text-slate-400">
+                        <ul className="space-y-2 text-slate-500 dark:text-slate-400">
                             <li>
                                 <a
                                     href="#"

@@ -79,7 +79,7 @@ const AiSmartDeskPage = () => {
                             <h1 className="mb-8 text-5xl leading-none font-light tracking-tight md:text-6xl lg:text-7xl">
                                 Intelligente Telefonie
                                 <br />
-                                <span className="text-slate-600 dark:text-slate-400">
+                                <span className="text-slate-500 dark:text-slate-400">
                                     auf Knopfdruck
                                 </span>
                             </h1>
@@ -89,7 +89,7 @@ const AiSmartDeskPage = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="mx-auto mb-12 max-w-4xl text-xl text-slate-600 dark:text-slate-400"
+                            className="mx-auto mb-12 max-w-4xl text-xl text-slate-500 dark:text-slate-400"
                         >
                             Täglich wiederkehrende Anfragen blockieren
                             Ressourcen – der Placetel AI SmartDesk übernimmt,
@@ -131,7 +131,7 @@ const AiSmartDeskPage = () => {
                                 in der Praxis
                             </span>
                         </h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400">
+                        <p className="text-xl text-slate-500 dark:text-slate-400">
                             Intelligente Lösungen für reale Herausforderungen
                         </p>
                     </motion.div>
@@ -189,10 +189,10 @@ const AiSmartDeskPage = () => {
                                                             >
                                                                 <Play className="h-8 w-8 text-current" />
                                                             </div>
-                                                            <p className="text-slate-600 dark:text-slate-400">
+                                                            <p className="text-slate-500 dark:text-slate-400">
                                                                 Demo Video
                                                             </p>
-                                                            <p className="text-sm text-slate-600 dark:text-slate-400">
+                                                            <p className="text-sm text-slate-500 dark:text-slate-400">
                                                                 Sehen Sie{' '}
                                                                 {useCase.title}{' '}
                                                                 in Aktion
@@ -222,11 +222,11 @@ const AiSmartDeskPage = () => {
                     >
                         <h2 className="mb-6 text-4xl md:text-5xl">
                             Einer, der{' '}
-                            <span className="text-slate-600 dark:text-slate-400">
+                            <span className="text-slate-500 dark:text-slate-400">
                                 nie Pause macht
                             </span>
                         </h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400">
+                        <p className="text-xl text-slate-500 dark:text-slate-400">
                             Die smarte Lösung für moderne Erreichbarkeit
                         </p>
                     </motion.div>
@@ -245,7 +245,7 @@ const AiSmartDeskPage = () => {
                             <h3 className="mb-3 text-lg">
                                 24/7 Erreichbarkeit
                             </h3>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
+                            <p className="text-sm text-slate-500 dark:text-slate-400">
                                 Immer für Kunden da – selbst abends, am
                                 Wochenende oder an Feiertagen
                             </p>
@@ -262,7 +262,7 @@ const AiSmartDeskPage = () => {
                                 <Check className="h-8 w-8 text-green-400" />
                             </div>
                             <h3 className="mb-3 text-lg">Plug & Play</h3>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
+                            <p className="text-sm text-slate-500 dark:text-slate-400">
                                 Direkt im Placetel Portal aktivieren – ganz ohne
                                 technische Hürden
                             </p>
@@ -298,7 +298,7 @@ const AiSmartDeskPage = () => {
                             <h3 className="mb-3 text-lg text-slate-100">
                                 80% Automatisierung
                             </h3>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
+                            <p className="text-sm text-slate-500 dark:text-slate-400">
                                 Übernimmt bis zu 80% der Anrufe vollautomatisch
                                 und rund um die Uhr
                             </p>
@@ -320,14 +320,14 @@ const AiSmartDeskPage = () => {
                             <h2 className="mb-6 text-4xl text-slate-100 md:text-5xl">
                                 Einrichtung direkt im
                                 <br />
-                                <span className="text-slate-600 dark:text-slate-400">
+                                <span className="text-slate-500 dark:text-slate-400">
                                     Kundenportal
                                 </span>
                             </h2>
-                            <p className="mb-6 text-xl text-slate-600 dark:text-slate-400">
+                            <p className="mb-6 text-xl text-slate-500 dark:text-slate-400">
                                 Schnell eingerichtet. Sofort einsatzbereit.
                             </p>
-                            <p className="mb-8 text-slate-600 dark:text-slate-400">
+                            <p className="mb-8 text-slate-500 dark:text-slate-400">
                                 Einfach zusammenklicken statt aufwendig
                                 konfigurieren: Der AI SmartDesk wird Schritt für
                                 Schritt im Placetel Portal erstellt und ist
@@ -363,7 +363,7 @@ const AiSmartDeskPage = () => {
                                                         {index + 1}
                                                     </span>
                                                 </div>
-                                                <span className="text-slate-600 dark:text-slate-400">
+                                                <span className="text-slate-500 dark:text-slate-400">
                                                     {step}
                                                 </span>
                                             </div>
@@ -373,36 +373,6 @@ const AiSmartDeskPage = () => {
                             </Card>
                         </motion.div>
                     </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-20">
-                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="mb-6 text-4xl text-slate-100 md:text-5xl">
-                            Bereit für{' '}
-                            <span className="text-slate-600 dark:text-slate-400">
-                                smarte Kommunikation?
-                            </span>
-                        </h2>
-                        <p className="mb-8 text-xl text-slate-600 dark:text-slate-400">
-                            Testen Sie jetzt den SmartDesk und verlieren Sie
-                            kein Gespräch – ganz ohne zusätzlichen Aufwand im
-                            Team.
-                        </p>
-                        <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                            <Button size="lg">Kostenlos testen</Button>
-                            <Button size="lg" variant="outline">
-                                Demo Call buchen
-                            </Button>
-                        </div>
-                    </motion.div>
                 </div>
             </section>
         </div>

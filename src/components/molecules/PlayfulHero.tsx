@@ -189,11 +189,12 @@ const PlayfulHero = () => {
                             }}
                             //   className=" rounded-bl-sm   relative transform hover:scale-105 transition-transform cursor-pointer"
                         >
-                            <SpeachBubbles className="max-w-xs rounded-2xl bg-slate-700 px-4 py-3 text-slate-100 shadow-lg backdrop-blur-sm">
+                            <SpeachBubbles className="max-w-xs rounded-2xl bg-white px-4 py-3 text-current shadow-lg backdrop-blur-sm dark:bg-slate-700 dark:text-slate-100">
                                 <div className="mb-1 flex items-center space-x-2">
-                                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20">
+                                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 dark:bg-white/20">
                                         <Phone className="h-3 w-3" />
                                     </div>
+
                                     <span className="text-xs opacity-80">
                                         Kunde
                                     </span>
@@ -230,7 +231,7 @@ const PlayfulHero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.9 }}
-                        className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-slate-600 dark:text-slate-400"
+                        className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-slate-500 dark:text-slate-400"
                     >
                         Placetel AI versteht jede Kundenanfrage und antwortet
                         sofort – während Ihr Team sich auf das Wesentliche
@@ -243,7 +244,7 @@ const PlayfulHero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 1.0 }}
-                            className="col-span-6 col-start-4 flex min-h-[140px] flex-col rounded-2xl border border-slate-700 bg-slate-800/60 p-6 shadow-xl backdrop-blur-sm"
+                            className="col-span-6 col-start-4 flex min-h-[140px] flex-col rounded-2xl border border-slate-200 bg-slate-200/60 p-6 dark:border-slate-700 dark:bg-slate-800/60"
                         >
                             <div className="mb-4 flex items-center">
                                 <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-xl bg-green-500">
@@ -253,7 +254,7 @@ const PlayfulHero = () => {
                                     <h3 className="text-lg font-medium">
                                         Placetel AI
                                     </h3>
-                                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">
                                         Intelligent. Schnell. Zuverlässig.
                                     </p>
                                 </div>
@@ -266,7 +267,7 @@ const PlayfulHero = () => {
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        className="/20 flex w-full items-center justify-center rounded-lg border border-slate-300 bg-slate-500/30 p-4"
+                                        className="/20 flex w-full items-center justify-center rounded-lg border border-slate-200 bg-slate-500/30 p-4"
                                     >
                                         <Loader2 className="h-5 w-5 animate-spin" />
                                         <span className="ml-2">

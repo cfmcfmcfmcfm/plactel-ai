@@ -1,10 +1,9 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
-import { Clock, Users, Zap } from 'lucide-react';
 import ProductComparison from '@/components/molecules/ProductComparison';
 import RoiCalculator from '@/components/molecules/RoiCalculator';
+import { motion } from 'framer-motion';
+import { Clock, Users, Zap } from 'lucide-react';
 import PlayfulHero from '../molecules/PlayfulHero';
 
 export default function LandingPage() {
@@ -25,7 +24,7 @@ export default function LandingPage() {
                         <h2 className="mb-6 text-4xl md:text-5xl">
                             Warum Placetel AI?
                         </h2>
-                        <p className="text-xl text-slate-600 dark:dark:text-slate-400">
+                        <p className="text-xl text-slate-500 dark:dark:text-slate-400">
                             Einfach. Intelligent. Sofort einsetzbar.
                         </p>
                     </motion.div>
@@ -46,7 +45,7 @@ export default function LandingPage() {
                                 24/7 Erreichbarkeit
                             </h3>
 
-                            <p className="text-slate-600 dark:text-slate-400">
+                            <p className="text-slate-500 dark:text-slate-400">
                                 Ihre Kunden erreichen Sie immer – auch außerhalb
                                 der Öffnungszeiten, am Wochenende und an
                                 Feiertagen.
@@ -66,7 +65,7 @@ export default function LandingPage() {
 
                             <h3 className="mb-4 text-xl">Team entlasten</h3>
 
-                            <p className="text-slate-600 dark:text-slate-400">
+                            <p className="text-slate-500 dark:text-slate-400">
                                 Bis zu 80% der Anrufe werden automatisch
                                 bearbeitet. Mehr Zeit für die Gespräche, die
                                 wirklich zählen.
@@ -86,7 +85,7 @@ export default function LandingPage() {
 
                             <h3 className="mb-4 text-xl">Sofort startklar</h3>
 
-                            <p className="text-slate-600 dark:text-slate-400">
+                            <p className="text-slate-500 dark:text-slate-400">
                                 Keine komplizierte Installation. Aktivierung
                                 direkt im Placetel Portal – in wenigen Minuten
                                 einsatzbereit.
@@ -99,34 +98,6 @@ export default function LandingPage() {
             <ProductComparison />
 
             <RoiCalculator />
-
-            {/* <VercelInspiredSection /> */}
-
-            {/* CTA Section */}
-            <section className="py-20">
-                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="mb-6 text-4xl md:text-5xl">
-                            Bereit für smarte Kommunikation?
-                        </h2>
-                        <p className="mb-8 text-xl text-slate-600 dark:text-slate-400">
-                            Testen Sie jetzt Placetel AI und verlieren Sie kein
-                            Gespräch – ganz ohne zusätzlichen Aufwand im Team.
-                        </p>
-                        <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                            <Button size="lg">Kostenlos testen</Button>
-                            <Button size="lg" variant="outline">
-                                Demo Call buchen
-                            </Button>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
         </div>
     );
 }

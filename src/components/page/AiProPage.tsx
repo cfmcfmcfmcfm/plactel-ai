@@ -84,7 +84,7 @@ const AiProPage = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="mx-auto mb-12 max-w-4xl text-xl text-slate-600 dark:text-slate-400"
+                            className="mx-auto mb-12 max-w-4xl text-xl text-slate-500 dark:text-slate-400"
                         >
                             Hohe Gesprächsvolumen, individuelle Anliegen,
                             heterogene Systeme? AI Pro erkennt Inhalte live,
@@ -121,18 +121,14 @@ const AiProPage = () => {
                         className="mb-16 text-center"
                     >
                         <h2 className="mb-6 text-4xl md:text-5xl">
-                            Flexibilität bis ins
-                            <br />
-                            <span className="text-slate-600 dark:text-slate-400">
-                                kleinste Detail
-                            </span>
+                            Flexibilität bis ins <br /> kleinste Detail
                         </h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400">
+                        <p className="text-xl text-slate-500 dark:text-slate-400">
                             Die smarte Lösung für komplexe Kommunikation
                         </p>
                     </motion.div>
 
-                    <div className="grid gap-8 lg:grid-cols-3">
+                    <div className="grid lg:grid-cols-3">
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}
@@ -144,7 +140,7 @@ const AiProPage = () => {
                                 }}
                                 viewport={{ once: true }}
                             >
-                                <Card className="group h-full border-slate-300 bg-slate-200/50 transition-all duration-300 dark:border-slate-700 dark:bg-slate-900/50 dark:hover:border-slate-700 dark:hover:bg-slate-800/70">
+                                <Card className="h-full">
                                     <CardContent className="p-8">
                                         <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500 transition-transform duration-300 group-hover:scale-110">
                                             <feature.icon className="h-6 w-6" />
@@ -180,7 +176,7 @@ const AiProPage = () => {
                                     Use Case: Automatisierte Koordination von
                                     Rauchwarnmelder-Wartungen
                                 </h3>
-                                <p className="text-slate-600 dark:text-slate-400">
+                                <p className="text-slate-500 dark:text-slate-400">
                                     Bei der Minol GmbH & Co. KG kommt es
                                     regelmäßig zu Stoßzeiten, wenn viele Kunden
                                     gleichzeitig wegen der Wartung ihrer
@@ -238,7 +234,7 @@ const AiProPage = () => {
 
                                     <div className="mb-6 rounded-xl border border-slate-700 p-6">
                                         <div className="mb-4 flex items-center justify-between">
-                                            <span className="text-sm text-slate-600 dark:text-slate-400">
+                                            <span className="text-sm text-slate-500 dark:text-slate-400">
                                                 Workflow Beispiel
                                             </span>
                                             <div className="h-2 w-2 animate-pulse rounded-full bg-green-400"></div>
@@ -290,12 +286,9 @@ const AiProPage = () => {
                             viewport={{ once: true }}
                         >
                             <h2 className="mb-6 text-4xl md:text-5xl">
-                                <span className="text-slate-400">
-                                    Visueller
-                                </span>{' '}
-                                Editor
+                                Visueller Editor
                             </h2>
-                            <p className="mb-6 text-xl text-slate-600 dark:text-slate-400">
+                            <p className="mb-6 text-xl text-slate-500 dark:text-slate-400">
                                 Maßgeschneiderte Gesprächsverläufe – ohne
                                 Aufwand.
                             </p>
@@ -435,14 +428,10 @@ const AiProPage = () => {
                         viewport={{ once: true }}
                         className="mb-16 text-center"
                     >
-                        <h2 className="mb-6 text-4xl md:text-5xl">
-                            Automatisierte Kommunikation
-                            <br />
-                            <span className="text-slate-400">
-                                auf höchstem Niveau
-                            </span>
+                        <h2 className="mx-auto mb-6 max-w-3xl text-4xl text-balance md:text-5xl">
+                            Automatisierte Kommunikation auf höchstem Niveau
                         </h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400">
+                        <p className="text-xl text-slate-500 dark:text-slate-400">
                             Individuell, skalierbar und sofort einsatzbereit
                         </p>
                     </motion.div>
@@ -520,37 +509,6 @@ const AiProPage = () => {
                             </p>
                         </motion.div>
                     </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-20">
-                <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="mb-6 text-4xl md:text-5xl">
-                            Bereit für komplexe
-                            <br />
-                            <span className="text-slate-400">
-                                AI-Automatisierung?
-                            </span>
-                        </h2>
-                        <p className="mb-8 text-xl text-slate-600 dark:text-slate-400">
-                            Entdecken Sie die Möglichkeiten von AI Pro und
-                            automatisieren Sie auch die komplexesten
-                            Kommunikationsprozesse in Ihrem Unternehmen.
-                        </p>
-                        <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                            <Button size="lg">Beta-Zugang anfordern</Button>
-                            <Button size="lg" variant="outline">
-                                Demo Call buchen
-                            </Button>
-                        </div>
-                    </motion.div>
                 </div>
             </section>
         </div>

@@ -7,6 +7,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import DynamicBackground from '@/components/atoms/DynamicBackground';
 import { ThemeProvider } from '@/components/atoms/ThemeProvider';
+import CTASection from '@/components/molecules/CTASection';
 
 const whyte = localFont({
     src: '../fonts/ABCWhyteVariable-Trial.woff2',
@@ -51,6 +52,7 @@ export default function RootLayout({
                 >
                     <Nav />
                     <main>{children}</main>
+                    <CTASection />
                     <Footer />
 
                     <DynamicBackground />
